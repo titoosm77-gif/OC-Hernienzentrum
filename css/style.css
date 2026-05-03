@@ -397,7 +397,7 @@ html[dir="rtl"] .search-result { text-align: right; }
 }
 .search-result .res-snippet {
   font-size: 13.5px;
-  color: var(--ink-soft);
+  color: #fff;(--ink-soft);
   line-height: 1.5;
   display: -webkit-box;
   -webkit-line-clamp: 2;
