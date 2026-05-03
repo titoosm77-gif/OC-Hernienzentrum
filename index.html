@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OC | OrthoChirurgie – Zertifiziertes Hernienzentrum Ludwigshafen. Ihre Fragen zu Leistenhernie, Nabelhernie und Narbenhernie.">
+  <title>OC | OrthoChirurgie – Hernienzentrum Ludwigshafen</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..600,0..100&family=Manrope:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#home" class="brand" data-page-link data-page="home">
+      <img src="assets/logo.png" alt="OC | OrthoChirurgie">
+      <span class="brand-tag">Hernienzentrum</span>
+    </a>
+
+    <nav class="nav-main" id="nav-main">
+      <a href="#home" data-page="home" class="active" data-i18n="nav_home">Start</a>
+      <a href="#about" data-page="about" data-i18n="nav_about">Über mich</a>
+      <a href="#types" data-page="types" data-i18n="nav_types">Hernienarten</a>
+      <a href="#faq" data-page="faq" data-i18n="nav_faq">FAQ</a>
+      <a href="#contact" data-page="contact" data-i18n="nav_contact">Kontakt</a>
+      <a href="#imprint" data-page="imprint" data-i18n="nav_imprint">Impressum</a>
+    </nav>
+
+    <div style="display:flex;align-items:center;gap:8px;">
+      <div class="lang-switch" role="group" aria-label="Sprache">
+        <button data-lang="de" class="active">DE</button>
+        <button data-lang="en">EN</button>
+        <button data-lang="ar">عربي</button>
+        <button data-lang="tr">TR</button>
+      </div>
+      <button class="menu-toggle" aria-label="Menü">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ========== PAGE: HOME ========== -->
+<section class="page active" id="page-home">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+        <span data-i18n="hero_eyebrow">Zertifiziertes Hernienzentrum OC | OrthoChirurgie</span>
+      </div>
+      <h1>
+        <span data-i18n="hero_title_a">Ihre Fragen zur</span>
+        <em data-i18n="hero_title_b">Hernie</em>
+        <span data-i18n="hero_title_c">beantwortet.</span>
+      </h1>
+      <p class="hero-sub" data-i18n="hero_sub">Stellen Sie Ihre Frage – unser Assistent durchsucht alle medizinischen Informationen und führt Sie direkt zur richtigen Antwort.</p>
+
+      <div class="searchbox">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="search-input" autocomplete="off" data-i18n-placeholder="search_placeholder" placeholder="z.B. „Wie lange falle ich nach der OP aus?&#34;">
+        <button id="search-btn">
+          <span data-i18n="search_btn">Suchen</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+        <div class="search-results" id="search-results"></div>
+      </div>
+
+      <div class="disclaimer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+        <span data-i18n="disclaimer">Diese Informationen ersetzen keine ärztliche Beratung.</span>
+      </div>
+
+      <div class="hero-shortcuts">
+        <button class="shortcut" data-page-link data-page="faq" onclick="document.querySelector('[data-cat=\'allgemein\']')?.click();">
+          <span class="shortcut-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11H5a2 2 0 0 0-2 2v7h18v-7a2 2 0 0 0-2-2h-4M9 11V5a3 3 0 1 1 6 0v6M9 11h6"/></svg></span>
+          <span class="shortcut-text" data-i18n="sc_op">Vor der Operation</span>
+        </button>
+        <button class="shortcut" data-page-link data-page="faq">
+          <span class="shortcut-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></span>
+          <span class="shortcut-text" data-i18n="sc_after">Nach der OP</span>
+        </button>
+        <button class="shortcut" data-page-link data-page="types">
+          <span class="shortcut-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>
+          <span class="shortcut-text" data-i18n="sc_types">Hernienarten</span>
+        </button>
+        <button class="shortcut" data-page-link data-page="contact">
+          <span class="shortcut-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <span class="shortcut-text" data-i18n="sc_contact">Praxis kontaktieren</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Strip -->
+  <section class="trust-strip">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <img src="assets/dhg-siegel.jpg" alt="DHG Siegel">
+          <div class="trust-item-text">
+            <strong data-i18n="trust_dhg">DHG-zertifiziertes Hernienzentrum</strong>
+            <span data-i18n="trust_dhg_sub">Qualitätsgesicherte Hernienchirurgie</span>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--teal-50);color:var(--teal-700);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v8M12 18v4M4.93 10.93l5.66 5.66M13.41 13.41l5.66 5.66M2 12h8M14 12h8M4.93 13.07l5.66-5.66M13.41 10.59l5.66-5.66"/></svg>
+          </div>
+          <div class="trust-item-text">
+            <strong data-i18n="trust_exp">Über 1.000 Hernien-Eingriffe</strong>
+            <span data-i18n="trust_exp_sub">Erfahrung in offenen & laparoskopischen Verfahren</span>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--navy-50);color:var(--navy-700);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="trust-item-text">
+            <strong data-i18n="trust_loc">2 Standorte in der Region</strong>
+            <span data-i18n="trust_loc_sub">Ludwigshafen & Mutterstadt</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</section>
+
+<!-- ========== PAGE: ABOUT ========== -->
+<section class="page" id="page-about">
+  <div class="container">
+    <div class="about">
+      <div class="about-photo">
+        <img src="assets/dr-osman.jpg" alt="Dr. med. Tarek Osman">
+      </div>
+      <div class="about-content">
+        <span class="about-role" data-i18n="about_eyebrow">Ihr Operateur</span>
+        <h2>
+          <span data-i18n="about_name_a">Dr. med.</span>
+          <em data-i18n="about_name_b">Tarek Osman</em>
+        </h2>
+        <p style="font-size:15px;color:var(--teal-700);font-weight:600;letter-spacing:0.04em;margin-bottom:24px;text-transform:uppercase;" data-i18n="about_role">Facharzt für Allgemein- und Viszeralchirurgie</p>
+        <p data-i18n="about_text_1">Als zertifizierter Hernienoperateur und Mitglied der Deutschen Herniengesellschaft (DHG) habe ich mich auf die operative Behandlung sämtlicher Hernienformen spezialisiert. In unserem zertifizierten Hernienzentrum verbinden wir modernste minimal-invasive Operationstechniken mit individueller Patientenversorgung.</p>
+        <p data-i18n="about_text_2">Schwerpunkte meiner Tätigkeit liegen in der laparo/endoskopischen Hernienchirurgie (TEP, TAPP, eTEP, E-MILOS, Lap IPOM), in der Versorgung komplexer Narben- und Rezidivhernien sowie in nervenerhaltenden Operationstechniken zur Vermeidung chronischer Schmerzen.</p>
+
+        <div class="credentials">
+          <div class="cred">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+            <span data-i18n="cred_dhg">Zertifizierter Hernienoperateur (DHG)</span>
+          </div>
+          <div class="cred">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+            <span data-i18n="cred_doc">Facharzt für Chirurgie</span>
+          </div>
+          <div class="cred">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+            <span data-i18n="cred_member">Mitglied der Deutschen Herniengesellschaft</span>
+          </div>
+          <div class="cred">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+            <span data-i18n="cred_quality">Teilnahme an Herniamed-Qualitätssicherung</span>
+          </div>
+        </div>
+
+        <a href="#cv" data-page-link data-page="cv" class="cv-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/><line x1="9" y1="11" x2="15" y2="11"/></svg>
+          <span data-i18n="cv_link">Vollständigen Lebenslauf ansehen</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PAGE: HERNIA TYPES ========== -->
+<section class="page" id="page-types">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow" data-i18n="types_eyebrow">Übersicht</div>
+      <h2>
+        <span data-i18n="types_title_a">Welche</span>
+        <em data-i18n="types_title_b">Hernienarten</em>
+        <span data-i18n="types_title_c">gibt es?</span>
+      </h2>
+      <p data-i18n="types_sub">Hernien können an verschiedenen Stellen der Bauchwand auftreten. Hier finden Sie eine Übersicht der häufigsten und seltensten Formen.</p>
+    </div>
+
+    <div class="hernia-grid" id="hernia-grid"></div>
+
+    <div class="special-section">
+      <h3 class="faq-section-title" data-i18n="types_special_title">Besondere Bauchwandhernien</h3>
+      <div class="special-grid" id="special-grid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PAGE: FAQ ========== -->
+<section class="page" id="page-faq">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow" data-i18n="faq_eyebrow">Häufig gestellte Fragen</div>
+      <h2>
+        <span data-i18n="faq_title_a">Antworten auf Ihre</span>
+        <em data-i18n="faq_title_b">medizinischen</em>
+        <span data-i18n="faq_title_c">Fragen.</span>
+      </h2>
+      <p data-i18n="faq_sub">Übersichtlich nach Themen geordnet – auf der Basis aktueller Leitlinien und langjähriger klinischer Erfahrung.</p>
+    </div>
+
+    <div class="faq-categories" id="faq-categories"></div>
+    <div id="faq-list"></div>
+  </div>
+</section>
+
+<!-- ========== PAGE: CONTACT ========== -->
+<section class="page" id="page-contact">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow" data-i18n="contact_eyebrow">Kontakt</div>
+      <h2>
+        <span data-i18n="contact_title_a">So</span>
+        <em data-i18n="contact_title_b">erreichen</em>
+        <span data-i18n="contact_title_c">Sie uns.</span>
+      </h2>
+      <p data-i18n="contact_sub">Wir sind für Sie an zwei Praxisstandorten und in unseren Operationskliniken erreichbar.</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <article class="contact-card">
+        <div class="contact-card-header">
+          <div class="contact-logo">
+            <img src="assets/logo.png" alt="OC | OrthoChirurgie">
+          </div>
+          <div class="contact-card-titles">
+            <span class="ctype" data-i18n="type_practice">Praxis</span>
+            <h3>OC Ludwigshafen</h3>
+          </div>
+        </div>
+        <p class="addr">Berthold-Schwarz-Str. 26<br>67063 Ludwigshafen-Friesenheim</p>
+        <div class="contact-actions">
+          <a class="btn" href="tel:062153399050">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            0621 53399050
+          </a>
+          <a class="btn btn-ghost" href="https://oc-orthochirurgie.com/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></svg>
+            Website
+          </a>
+          <a class="btn btn-ghost" href="https://maps.google.com/?q=Berthold-Schwarz-Str.+26,+67063+Ludwigshafen" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span data-i18n="btn_map">Karte</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="contact-card">
+        <div class="contact-card-header">
+          <div class="contact-logo">
+            <img src="assets/logo.png" alt="OC | OrthoChirurgie">
+          </div>
+          <div class="contact-card-titles">
+            <span class="ctype" data-i18n="type_practice">Praxis</span>
+            <h3>OC Mutterstadt</h3>
+          </div>
+        </div>
+        <p class="addr">Oggersheimer Straße 42<br>67112 Mutterstadt</p>
+        <div class="contact-actions">
+          <a class="btn" href="tel:062349288500">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            06234 9288500
+          </a>
+          <a class="btn btn-ghost" href="https://oc-orthochirurgie.com/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></svg>
+            Website
+          </a>
+          <a class="btn btn-ghost" href="https://maps.google.com/?q=Oggersheimer+Stra%C3%9Fe+42,+67112+Mutterstadt" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span data-i18n="btn_map">Karte</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="contact-card">
+        <div class="contact-card-header">
+          <div class="contact-logo">
+            <img src="assets/apollonia-logo.jpg" alt="Apollonia Kurpfalzklinik">
+          </div>
+          <div class="contact-card-titles">
+            <span class="ctype" data-i18n="type_clinic">Klinik (OP)</span>
+            <h3>Apollonia Kurpfalzklinik</h3>
+          </div>
+        </div>
+        <p class="addr">Ludwigshafen am Rhein<br><span data-i18n="addr_apollonia">Ambulante Hernienchirurgie</span></p>
+        <div class="contact-actions">
+          <a class="btn" href="tel:06215299247">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            0621 5299247
+          </a>
+          <a class="btn btn-ghost" href="https://apollonia-kurpfalzklinik.de/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></svg>
+            Website
+          </a>
+          <a class="btn btn-ghost" href="https://maps.google.com/?q=Apollonia+Kurpfalzklinik+Ludwigshafen" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span data-i18n="btn_map">Karte</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="contact-card">
+        <div class="contact-card-header">
+          <div class="contact-logo">
+            <img src="assets/grn-logo.png" alt="GRN Klinik Schwetzingen">
+          </div>
+          <div class="contact-card-titles">
+            <span class="ctype" data-i18n="type_clinic">Klinik (OP)</span>
+            <h3>GRN Klinik Schwetzingen</h3>
+          </div>
+        </div>
+        <p class="addr">68723 Schwetzingen<br><span data-i18n="addr_grn">Ambulante & stationäre Hernienchirurgie</span></p>
+        <div class="contact-actions">
+          <a class="btn" href="tel:062028465230">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            06202 8465230
+          </a>
+          <a class="btn btn-ghost" href="https://www.grn.de/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></svg>
+            Website
+          </a>
+          <a class="btn btn-ghost" href="https://maps.google.com/?q=GRN+Klinik+Schwetzingen" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span data-i18n="btn_map">Karte</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="contact-card">
+        <div class="contact-card-header">
+          <div class="contact-logo" style="background:var(--navy-50);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--navy-700)" stroke-width="1.6" style="width:32px;height:32px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+          </div>
+          <div class="contact-card-titles">
+            <span class="ctype">E-Mail</span>
+            <h3 data-i18n="email_title">Allgemeine Anfragen</h3>
+          </div>
+        </div>
+        <p class="addr" data-i18n="email_desc">Für nicht dringliche Anfragen, Befundübermittlung oder Rückfragen erreichen Sie uns am einfachsten per E-Mail.</p>
+        <div class="contact-actions">
+          <a class="btn" href="mailto:info@oc-orthochirurgie.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+            info@oc-orthochirurgie.com
+          </a>
+        </div>
+      </article>
+
+      <article class="contact-card doctolib-card">
+        <div class="contact-card-header">
+          <div class="contact-logo">
+            <img src="assets/doctolib-logo.jpg" alt="Doctolib">
+          </div>
+          <div class="contact-card-titles">
+            <span class="ctype">Doctolib</span>
+            <h3 data-i18n="doctolib_title">Online-Termin buchen</h3>
+          </div>
+        </div>
+        <p class="addr" data-i18n="doctolib_desc">Vereinbaren Sie bequem online einen Wunschtermin bei Dr. med. Tarek Osman – rund um die Uhr verfügbar.</p>
+        <div class="contact-actions">
+          <a class="btn" href="https://www.doctolib.de/allgemeiner-chirurg/ludwigshafen-am-rhein/tarek-osman" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span data-i18n="doctolib_btn">Termin buchen</span>
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- QR Code Block -->
+    <div class="qr-block">
+      <img src="assets/qrcode.png" alt="QR Code Praxis">
+      <div>
+        <h3 data-i18n="qr_title">Direkt zur Praxis</h3>
+        <p data-i18n="qr_sub">Scannen Sie den QR-Code, um zu unseren Praxisinformationen, Online-Terminen und Wegbeschreibung zu gelangen.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== PAGE: IMPRINT ========== -->
+<section class="page" id="page-imprint">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow" data-i18n="nav_imprint">Impressum</div>
+      <h2 data-i18n="imp_title">Impressum</h2>
+    </div>
+
+    <div class="imprint">
+      <h3>OC | OrthoChirurgie</h3>
+      <p data-i18n="imp_desc">Überörtliche Berufsausübungsgemeinschaft für Chirurgie und Orthopädie (Gemeinschaftspraxis) in der Rechtsform der Gesellschaft bürgerlichen Rechts (GbR)</p>
+
+      <h3 data-i18n="imp_rep">Vertreten durch die Gesellschafter</h3>
+      <p data-i18n="imp_doctors">Solange Jöhnk, Irfan Halaceli, Dr. med. Tarek Osman und Dr. med. Jan-Henrik Dieckmann</p>
+
+      <h3 data-i18n="imp_contact">Kontakt</h3>
+      <p>
+        Berthold-Schwarz-Str. 26, 67063 Ludwigshafen<br>
+        Tel.: 0621 53399050 (LU) | 06234 9288500 (MU)<br>
+        E-Mail: <a href="mailto:info@oc-orthochirurgie.com">info@oc-orthochirurgie.com</a>
+      </p>
+
+      <h3 data-i18n="imp_supervision">Aufsichtsbehörde</h3>
+      <p data-i18n="imp_supervision_text">Kassenärztliche Vereinigung Rheinland-Pfalz<br>Isaac-Fulda-Allee 14<br>55124 Mainz</p>
+      <p><a href="https://www.kv-rlp.de" target="_blank" rel="noopener">www.kv-rlp.de</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PAGE: LEISTENHERNIE DETAIL ========== -->
+<section class="page" id="page-leistenhernie-detail">
+  <div class="container">
+    <div class="detail-page">
+      <button class="back-link" data-page-link data-page="types">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span data-i18n="back_to_types">Zurück zu Hernienarten</span>
+      </button>
+
+      <div class="section-eyebrow" data-i18n="leisten_eyebrow">Patienteninformation</div>
+      <h1>
+        <span data-i18n="leisten_title_a">Die</span>
+        <em data-i18n="leisten_title_b">Leistenhernie</em>
+        <span data-i18n="leisten_title_c">(Leistenbruch)</span>
+      </h1>
+
+      <h2 data-i18n="leisten_h_what">Was ist ein Leistenbruch?</h2>
+      <p data-i18n="leisten_p_what">Bei einem Leistenbruch drücken sich Eingeweide, wie zum Beispiel der Dünndarm, durch eine natürliche Schwachstelle der Bauchwand direkt in den Leistenkanal.</p>
+      <ul>
+        <li data-i18n="leisten_li_anatomy"><strong>Anatomie:</strong> Durch diesen Kanal verläuft beim Mann der Samenleiter und bei der Frau das Mutterband.</li>
+        <li data-i18n="leisten_li_recog"><strong>Erkennung:</strong> Oft bildet sich eine von außen sicht- und tastbare Vorwölbung.</li>
+        <li data-i18n="leisten_li_freq"><strong>Häufigkeit:</strong> Männer sind weitaus deutlicher von einem Leistenbruch betroffen als Frauen.</li>
+      </ul>
+
+      <h2 data-i18n="leisten_h_cause">Wie kommt es zu einem Leistenbruch?</h2>
+      <p data-i18n="leisten_p_cause">Es gibt nicht die eine Ursache; oft spielen verschiedene Risikofaktoren zusammen:</p>
+      <ul>
+        <li data-i18n="leisten_li_tissue"><strong>Gewebe:</strong> Eine geschwächte Bauchwandmuskulatur oder schwaches Bindegewebe.</li>
+        <li data-i18n="leisten_li_pressure"><strong>Druck:</strong> Erhöhter Druck im Bauchinnenraum.</li>
+        <li data-i18n="leisten_li_trigger"><strong>Auslöser:</strong> Schweres Heben und Tragen, chronischer Husten (häufig bei Rauchern), starkes Niesen oder heftiges Pressen beim Stuhlgang.</li>
+      </ul>
+
+      <h2 data-i18n="leisten_h_treat">Behandlung und Operation</h2>
+      <p data-i18n="leisten_p_treat">In der modernen Bruchchirurgie wird jeder Patient individuell versorgt. Die Wahl des Verfahrens hängt von der Größe und Form des Bruches sowie den Ansprüchen des Patienten ab. Dabei orientieren wir uns in der OC | OrthoChirurgie an den Leitlinien der europäischen Herniengesellschaft.</p>
+      <p data-i18n="leisten_p_options">Es stehen grundsätzlich zwei Wege zur Verfügung:</p>
+
+      <h3 data-i18n="leisten_h_meshfree">1. Netzfreies Verfahren</h3>
+      <p data-i18n="leisten_p_meshfree">Nicht jeder Bruch muss mit einem Netz verstärkt werden. Bei einer offenen Operation (ca. 5–7 cm langer Schnitt) wird der Bruchsack in die Bauchhöhle zurückgebracht. Die Bruchlücke wird plastisch mit dem eigenen Gewebe des Patienten gedeckt.</p>
+
+      <h3 data-i18n="leisten_h_mesh">2. Netzverfahren</h3>
+      <p data-i18n="leisten_p_mesh">Hier wird die Schwachstelle zusätzlich durch ein spezielles Kunststoffnetz stabilisiert.</p>
+      <ul>
+        <li data-i18n="leisten_li_lichten"><strong>Lichtenstein-OP:</strong> Eines der am häufigsten eingesetzten Verfahren.</li>
+        <li data-i18n="leisten_li_tep"><strong>TEP- oder TAPP-Operation:</strong> Dies sind „Schlüssellochoperationen" (minimalinvasiv). Über kleine Schnitte unterhalb des Nabels werden großflächige Netze von der Rückseite der Bauchwand eingesetzt. Bei der TAPP geht der Chirurg in den Bauchraum und versorgt die Hernie. Bei der TEP bleibt der Chirurg außerhalb des Bauchraums und versorgt die Hernie.</li>
+      </ul>
+
+      <div class="info-box" data-i18n="detail_disclaimer"><strong>Hinweis:</strong> Diese Informationen ersetzen keine ärztliche Beratung. Sprechen Sie für Ihre individuelle Situation mit Ihrem behandelnden Arzt.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PAGE: NABELHERNIE DETAIL ========== -->
+<section class="page" id="page-nabelhernie-detail">
+  <div class="container">
+    <div class="detail-page">
+      <button class="back-link" data-page-link data-page="types">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span data-i18n="back_to_types">Zurück zu Hernienarten</span>
+      </button>
+
+      <div class="section-eyebrow" data-i18n="nabel_eyebrow">Patienteninformation</div>
+      <h1>
+        <span data-i18n="nabel_title_a">Die</span>
+        <em data-i18n="nabel_title_b">Nabelhernie</em>
+        <span data-i18n="nabel_title_c">(Nabelbruch)</span>
+      </h1>
+
+      <h2 data-i18n="nabel_h_what">Was ist eine Nabelhernie?</h2>
+      <p data-i18n="nabel_p_what">Bei einem Bruch (Hernie) drücken sich Eingeweide, beispielsweise der Dünndarm, durch eine Schwachstelle der Bauchwand nach außen. Im Falle einer Nabelhernie befindet sich diese Schwachstelle im Bereich des Nabels. Oft bildet sich dabei eine von außen sicht- und tastbare Vorwölbung.</p>
+
+      <h2 data-i18n="nabel_h_cause">Wie kommt es zu einer Nabelhernie?</h2>
+      <p data-i18n="nabel_p_cause">Ein Bruch kann verschiedene Ursachen haben und durch zahlreiche Risikofaktoren gefördert werden:</p>
+      <ul>
+        <li data-i18n="nabel_li_tissue"><strong>Gewebe:</strong> Eine geschwächte Bauchwandmuskulatur oder schwaches Bindegewebe spielen eine zentrale Rolle.</li>
+        <li data-i18n="nabel_li_pressure"><strong>Druck:</strong> Erhöhter Druck im Inneren des Bauches ist ein Hauptauslöser.</li>
+        <li data-i18n="nabel_li_load"><strong>Belastungen:</strong> Dieser Druck kann durch schweres Tragen und Heben, chronisches Husten, Niesen oder anstrengendes Pressen beim Stuhlgang hervorgerufen werden.</li>
+      </ul>
+
+      <h2 data-i18n="nabel_h_treat">Wie wird eine Nabelhernie operiert?</h2>
+      <p data-i18n="nabel_p_treat">In der modernen Bruchchirurgie wird jeder Patient individuell versorgt. Die Wahl des Verfahrens hängt von der Größe und Form des Bruches sowie den Ansprüchen des Patienten ab. Dabei orientieren wir uns in der OC | OrthoChirurgie an den Leitlinien der europäischen Herniengesellschaft.</p>
+      <p data-i18n="nabel_p_options">Es stehen grundsätzlich zwei Wege zur Verfügung:</p>
+      <ul>
+        <li data-i18n="nabel_li_meshfree"><strong>Netzfreies Verfahren:</strong> Bei diesem offenen Eingriff wird der Bruchsack zurückgebracht und die Lücke plastisch mit eigenem resorbierbaren oder nicht resorbierbarer Naht verschlossen.</li>
+        <li data-i18n="nabel_li_mesh"><strong>Netzverfahren:</strong> Hier wird die Bruchlücke mit einem speziellen Kunststoffnetz stabilisiert. Dies kann offen (PUMP, MILOS, IPOM) oder mittels Schlüssellochoperation (eTEP, E-MILOS, Lap IPOM) erfolgen.</li>
+      </ul>
+
+      <div class="info-box" data-i18n="detail_disclaimer"><strong>Hinweis:</strong> Diese Informationen ersetzen keine ärztliche Beratung. Sprechen Sie für Ihre individuelle Situation mit Ihrem behandelnden Arzt.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PAGE: NARBENHERNIE DETAIL ========== -->
+<section class="page" id="page-narbenhernie-detail">
+  <div class="container">
+    <div class="detail-page">
+      <button class="back-link" data-page-link data-page="types">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span data-i18n="back_to_types">Zurück zu Hernienarten</span>
+      </button>
+
+      <div class="section-eyebrow" data-i18n="narben_eyebrow">Patienteninformation</div>
+      <h1>
+        <span data-i18n="narben_title_a">Die</span>
+        <em data-i18n="narben_title_b">Narbenhernie</em>
+        <span data-i18n="narben_title_c">(Narbenbruch)</span>
+      </h1>
+
+      <h2 data-i18n="narben_h_what">Was ist eine Narbenhernie?</h2>
+      <p data-i18n="narben_p_what">Eine Narbenhernie ist ein Bruch, der im Bereich einer früheren Operationsnarbe auftritt. Dabei drücken sich Eingeweide durch die dort entstandene Schwachstelle der Bauchwand. Es kann eine Vorwölbung entstehen, die von außen sichtbar und tastbar ist.</p>
+
+      <h2 data-i18n="narben_h_cause">Wie kommt es zu einer Narbenhernie?</h2>
+      <p data-i18n="narben_p_cause">Die Entstehung wird durch eine Kombination aus lokaler Schwäche und innerem Druck begünstigt:</p>
+      <ul>
+        <li data-i18n="narben_li_tissue"><strong>Gewebe:</strong> Die Bauchwandmuskulatur oder das Bindegewebe im Bereich der Narbe ist geschwächt.</li>
+        <li data-i18n="narben_li_pressure"><strong>Druckfaktoren:</strong> Starker Druck im Bauchraum fördert das Nachgeben der Narbe.</li>
+        <li data-i18n="narben_li_risks"><strong>Risiken:</strong> Faktoren wie chronischer Husten (z.&nbsp;B. bei Rauchern), schweres Heben oder starkes Pressen erhöhen das Risiko für einen Narbenbruch.</li>
+      </ul>
+
+      <h2 data-i18n="narben_h_treat">Wie wird eine Narbenhernie operiert?</h2>
+      <p data-i18n="narben_p_treat">Die Entscheidung über eine Operation wird für jeden Patienten individuell getroffen. Wir orientieren uns in der OC | OrthoChirurgie an den Leitlinien der europäischen Herniengesellschaft. In der Regel muss eine Narbenhernie mittels Netzes versorgt werden. Eine Versorgung mittels Direktnaht ist oft mit einem sehr hohen Rezidivrisiko verbunden.</p>
+      <p data-i18n="narben_p_select">Das Verfahren wird passgenau nach Form und Größe des Bruches ausgewählt:</p>
+      <ul>
+        <li data-i18n="narben_li_own"><strong>Verschluss mit Eigengewebe:</strong> Bei kleineren Brüchen kann eine offene Operation erfolgen, bei der die Lücke mit dem eigenen Gewebe des Patienten gedeckt wird. Diese ist leider mit einem sehr hohen Rezidivrisiko verbunden.</li>
+        <li data-i18n="narben_li_mesh"><strong>Verschluss mit Kunststoffnetz:</strong> Bei vielen Narbenhernien ist die Verstärkung durch ein spezielles Netz sinnvoll. Zum Einsatz kommen offene Verfahren (PUMP, Sublay, IPOM) oder moderne Schlüssellochtechniken (eTEP, Lap IPOM), bei denen großflächige Netze eingesetzt werden.</li>
+      </ul>
+
+      <div class="info-box" data-i18n="detail_disclaimer"><strong>Hinweis:</strong> Diese Informationen ersetzen keine ärztliche Beratung. Sprechen Sie für Ihre individuelle Situation mit Ihrem behandelnden Arzt.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PAGE: LEBENSLAUF (CV) ========== -->
+<section class="page" id="page-cv">
+  <div class="container">
+    <div class="cv-page">
+      <button class="back-link" data-page-link data-page="about">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span data-i18n="back_to_about">Zurück zu Über mich</span>
+      </button>
+
+      <div class="section-eyebrow" data-i18n="cv_eyebrow">Curriculum Vitae</div>
+      <h1>
+        <span data-i18n="cv_title_a">Lebenslauf</span>
+        <em data-i18n="cv_title_b">Dr. med. Tarek Osman</em>
+      </h1>
+
+      <div class="cv-section">
+        <h2 data-i18n="cv_h_career">Beruflicher Werdegang</h2>
+        <ul class="cv-list">
+          <li><span class="cv-year">1997 – 2002</span><span data-i18n="cv_career_1">Medizinstudium an der Medizinischen Fakultät der Universität Damaskus, Syrien.</span></li>
+          <li><span class="cv-year">2002</span><span data-i18n="cv_career_2">Verleihung des Doktorgrades, Thesis „Esophageal Surgical Abnormalities".</span></li>
+          <li><span class="cv-year">2004 – 2007</span><span data-i18n="cv_career_3">Wissenschaftlicher und klinischer Assistenzarzt im Forschungslabor des europäischen Pankreaszentrums und in der Abteilung für Allgemein-, Viszeral- und Unfallchirurgie. Prof. Dr. med. M. W. Büchler / Prof. Dr. med. H. Friess.</span></li>
+          <li><span class="cv-year">2006</span><span data-i18n="cv_career_4">Promotion (Dr. med.): „BLT2 is Expressed in PanINs, IPMNs, Pancreatic Cancer and Stimulates Tumor Cell Proliferation", „Magna cum laude", Universität Heidelberg. Prof. Dr. med. H. Friess.</span></li>
+          <li><span class="cv-year">2007 – 2008</span><span data-i18n="cv_career_5">Assistenzarzt in der Abteilung für Urologie, GRN Klinik Eberbach. Dr. med. T. Schmidt.</span></li>
+          <li><span class="cv-year">2008 – 2011</span><span data-i18n="cv_career_6">Assistenzarzt in der Abteilung für Allgemein-, Viszeral- und Unfallchirurgie, GRN Klinik Eberbach. Dr. med. H. Reinhard.</span></li>
+          <li><span class="cv-year">2011 – 2013</span><span data-i18n="cv_career_7">Assistenzarzt in der Abteilung für Allgemein-, Viszeral- und Gefäßchirurgie, GRN Klinik Schwetzingen. Dr. med. Lange / Dr. med. J. Weiß.</span></li>
+          <li><span class="cv-year">2013</span><span data-i18n="cv_career_8">Facharzt für Chirurgie.</span></li>
+          <li><span class="cv-year">2014 – 2018</span><span data-i18n="cv_career_9">Kompetenzzentrum für Hernienchirurgie, GRN Klinik Schwetzingen.</span></li>
+          <li><span class="cv-year" data-i18n="cv_year_current">2016 – heute</span><span data-i18n="cv_career_10">Funktionsoberarzt in der Abteilung für Allgemein-, Viszeral- und Gefäßchirurgie, GRN Klinik Schwetzingen. Dr. med. J. Weiß.</span></li>
+          <li><span class="cv-year">2018</span><span data-i18n="cv_career_11">Anstellung im Zentrum für Chirurgie und Orthopädie.</span></li>
+          <li><span class="cv-year">2019</span><span data-i18n="cv_career_12">Facharzt für Viszeralchirurgie.</span></li>
+          <li><span class="cv-year">2020</span><span data-i18n="cv_career_13">Gründer und Leiter des Zentrums für Hernienchirurgie in der OC | OrthoChirurgie.</span></li>
+          <li><span class="cv-year">2024</span><span data-i18n="cv_career_14">Gesellschafter in der OC | OrthoChirurgie.</span></li>
+        </ul>
+      </div>
+
+      <div class="cv-section">
+        <h2 data-i18n="cv_h_focus">Tätigkeitsschwerpunkte</h2>
+        <ul class="cv-list">
+          <li data-i18n="cv_focus_1">Hernienchirurgie</li>
+          <li data-i18n="cv_focus_2">Diagnostik und Therapie chronischer Leistenschmerzen</li>
+          <li data-i18n="cv_focus_3">Viszeralchirurgie (diagnostische Laparoskopie, Cholezystektomie u.&nbsp;a.)</li>
+          <li data-i18n="cv_focus_4">Port-Implantationen und Explantationen</li>
+          <li data-i18n="cv_focus_5">Diagnostik und Behandlung von Gelenk- und Rückenerkrankungen, Gelenkinjektionen (z.&nbsp;B. Hyaluronsäure, Eigenbluttherapie)</li>
+        </ul>
+      </div>
+
+      <div class="cv-section">
+        <h2 data-i18n="cv_h_member">Mitgliedschaften</h2>
+        <ul class="cv-list">
+          <li>Deutsche Gesellschaft für Allgemein- und Viszeralchirurgie (DGAV)</li>
+          <li>Deutsche Gesellschaft für Chirurgie (DGCH)</li>
+          <li>Deutsche Herniengesellschaft (DHG)</li>
+          <li>Berufsverband der deutschen Chirurgen (BDC)</li>
+        </ul>
+      </div>
+
+      <div class="cv-section">
+        <h2 data-i18n="cv_h_pub">Publikationen</h2>
+        <ul class="cv-list">
+          <li><strong>BLT2 is Expressed in PanINs, IPMNs, Pancreatic Cancer and Stimulates Tumor Cell Proliferation.</strong><br>T. Osman, R. Hennig, I. Esposito, S. M. Rao, N. Giese, X-Z. Ding, W-G. Tong, T. Yokomizo, H. Friess, T. Adrian. <em>British Journal of Cancer</em>, 2008.</li>
+          <li><strong>Association between gallstone-evoked pain, inflammation and proliferation of nerves in the gallbladder.</strong><br>R. Hennig, J. Zanli, T. Osman, I. Esposito, T. Berhane, M. Vetrhus, K. Sondenaa, M. W. Büchler, H. Friess. <em>Scandinavian Journal of Gastroenterology</em>, 2007.</li>
+          <li><strong>Hedgehog signalling in the normal and diseased pancreas.</strong><br>H. Kayed, J. Kleef, T. Osman, S. Keleg, M. W. Büchler, H. Friess. <em>Pancreas</em>, Volume 32, März 2006.</li>
+        </ul>
+      </div>
+
+      <div class="cv-section">
+        <h2 data-i18n="cv_h_lectures">Vorträge</h2>
+        <ul class="cv-list">
+          <li data-i18n="cv_lect_1"><strong>Deutscher Pankreasclub (DPC) 2007, Dresden – 11/2007</strong><br>„Thymoquinone: ein vielversprechendes Therapieziel beim Pankreaskarzinom"</li>
+          <li data-i18n="cv_lect_2"><strong>Deutscher Pankreasclub (DPC) 2006, Greifswald – 11/2006</strong><br>„Leukotriene B4 Rezeptor 2 (BLT2) – ein spezifischer Marker und Promoter in der Pankreaskarzinogenese?"</li>
+        </ul>
+      </div>
+
+      <div class="cv-section">
+        <h2 data-i18n="cv_h_awards">Auszeichnungen</h2>
+        <ul class="cv-list">
+          <li data-i18n="cv_award_1">Reisestipendium des Deutschen Pankreasclub 2007, Dresden (22.–24.11.2007)</li>
+          <li data-i18n="cv_award_2">Stipendium, Heidelberger Stiftung Chirurgie (01.10.2007 – 31.03.2008)</li>
+          <li data-i18n="cv_award_3">Stipendium der Manfred Lautenschlaeger-Stiftung / Heidelberger Stiftung Chirurgie (01.10.2004 – 31.09.2007)</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p data-i18n="footer_about">Praxis für Orthopädie und Chirurgie. Zertifiziertes Hernienzentrum mit zwei Standorten in Ludwigshafen-Friesenheim und Mutterstadt.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_nav">Navigation</h4>
+        <a href="#home" data-page-link data-page="home" data-i18n="nav_home">Start</a>
+        <a href="#about" data-page-link data-page="about" data-i18n="nav_about">Über mich</a>
+        <a href="#types" data-page-link data-page="types" data-i18n="nav_types">Hernienarten</a>
+        <a href="#faq" data-page-link data-page="faq" data-i18n="nav_faq">FAQ</a>
+        <a href="#contact" data-page-link data-page="contact" data-i18n="nav_contact">Kontakt</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_legal">Rechtliches</h4>
+        <a href="#imprint" data-page-link data-page="imprint" data-i18n="nav_imprint">Impressum</a>
+        <p>info@oc-orthochirurgie.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 <span data-i18n="footer_copyright">OC | OrthoChirurgie. Alle Rechte vorbehalten.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== SCRIPTS ========== -->
+<script src="js/data-1.js"></script>
+<script src="js/data-2.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
