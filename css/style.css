@@ -360,7 +360,7 @@ html[dir="rtl"] .brand-tag {
   position: absolute;
   top: calc(100% + 8px);
   left: 0; right: 0;
-  background: var(--surface);
+  background: #fff;
   border-radius: var(--r-lg);
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--line);
@@ -373,31 +373,32 @@ html[dir="rtl"] .brand-tag {
 .search-result {
   display: block;
   width: 100%;
-  background: #fff;
-  color: #fff;(--ink);
+  background: #ffffff !important;
+  color: #1e2a3a !important;
   padding: 16px 22px;
-  border-bottom: 1px solid var(--line-soft);
+  border-bottom: 1px solid #e2e8f0;
   cursor: pointer;
   transition: background .15s;
   text-align: left;
   border-radius: 0;
+  transform: none !important;
 }
 .search-result:hover {
-  background: var(--teal-50);
-  transform: none;
-  color: #fff;(--ink);
+  background: #f0fdfa !important;
+  color: #1e2a3a !important;
+  transform: none !important;
 }
 html[dir="rtl"] .search-result { text-align: right; }
 .search-result:last-child { border-bottom: none; }
 .search-result .res-q {
   font-weight: 600;
   font-size: 15px;
-  color: var(--navy-700);
+  color: #1e2a3a !important;
   margin-bottom: 4px;
 }
 .search-result .res-snippet {
   font-size: 13.5px;
-  color: #fff;(--ink-soft);
+  color: #4a5568 !important;
   line-height: 1.5;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -408,7 +409,7 @@ html[dir="rtl"] .search-result { text-align: right; }
   display: inline-block;
   font-size: 11px;
   font-weight: 600;
-  color: #fff;(--teal-700);
+  color: #0d9488 !important;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   margin-bottom: 4px;
