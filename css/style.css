@@ -360,7 +360,7 @@ html[dir="rtl"] .brand-tag {
   position: absolute;
   top: calc(100% + 8px);
   left: 0; right: 0;
-  background: #fff;(--surface);
+  background: var(--surface);
   border-radius: var(--r-lg);
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--line);
@@ -374,7 +374,7 @@ html[dir="rtl"] .brand-tag {
   display: block;
   width: 100%;
   background: #fff;
-  color: var(--ink);
+  color: #fff;(--ink);
   padding: 16px 22px;
   border-bottom: 1px solid var(--line-soft);
   cursor: pointer;
@@ -385,7 +385,7 @@ html[dir="rtl"] .brand-tag {
 .search-result:hover {
   background: var(--teal-50);
   transform: none;
-  color: var(--ink);
+  color: #fff;(--ink);
 }
 html[dir="rtl"] .search-result { text-align: right; }
 .search-result:last-child { border-bottom: none; }
@@ -408,7 +408,7 @@ html[dir="rtl"] .search-result { text-align: right; }
   display: inline-block;
   font-size: 11px;
   font-weight: 600;
-  color: var(--teal-700);
+  color: #fff;(--teal-700);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   margin-bottom: 4px;
