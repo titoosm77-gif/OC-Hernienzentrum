@@ -360,7 +360,7 @@ html[dir="rtl"] .brand-tag {
   position: absolute;
   top: calc(100% + 8px);
   left: 0; right: 0;
-  background: white;(--surface);
+  background: #fff;(--surface);
   border-radius: var(--r-lg);
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--line);
