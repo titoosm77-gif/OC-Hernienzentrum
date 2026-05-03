@@ -47,8 +47,7 @@
       const key = el.getAttribute('data-i18n');
       const val = t(key);
       if (val) {
-        if (key === 'imp_supervision_text') el.innerHTML = val;
-        else el.innerHTML = val;
+        el.innerHTML = val;
       }
     });
     // Placeholder translations
