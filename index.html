@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
 <head>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#1f2c5c"/><text x="100" y="100" font-size="60" text-anchor="middle" dominant-baseline="middle" fill="#fff">OC</text></svg></template>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="OC | OrthoChirurgie – Zertifiziertes Hernienzentrum Ludwigshafen. Ihre Fragen zu Leistenhernie, Nabelhernie und Narbenhernie.">
@@ -21,7 +22,7 @@
   <div class="header-inner">
     <a href="#home" class="brand" data-page-link data-page="home">
       <img src="assets/logo.png" alt="OC | OrthoChirurgie">
-      <span class="brand-tag">Hernienzentrum</span>
+      <span class="brand-tag" style="font-family: Bebas Neue; width: 140px; height: 21px; font-size: 15px; text-align: left; text-transform: uppercase">Hernienzentrum</span>
     </a>
 
     <nav class="nav-main" id="nav-main">
@@ -30,6 +31,7 @@
       <a href="#types" data-page="types" data-i18n="nav_types">Hernienarten</a>
       <a href="#faq" data-page="faq" data-i18n="nav_faq">FAQ</a>
       <a href="#contact" data-page="contact" data-i18n="nav_contact">Kontakt</a>
+      <a href="#downloads" data-page="downloads" data-i18n="nav_downloads">Downloads</a>
       <a href="#imprint" data-page="imprint" data-i18n="nav_imprint">Impressum</a>
     </nav>
 
@@ -51,18 +53,20 @@
 <section class="page active" id="page-home">
 
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero" style="background: url(&quot;./ocorthochirurgie-dr-med-tarek-osman-2-msghfawi-020a.png&quot;) center / cover no-repeat; left: 0px; overflow: hidden; border-radius: 0px; opacity: 1; height: 811px; z-index: 0; position: relative; display: block; padding: 63px 38px 63px 82px">
     <div class="container hero-inner">
       <div class="hero-eyebrow">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
         <span data-i18n="hero_eyebrow">Zertifiziertes Hernienzentrum OC | OrthoChirurgie</span>
       </div>
+      <div class="hero-cta-row"><a class="hero-cta" href="https://www.doctolib.de/allgemeiner-chirurg/ludwigshafen-am-rhein/tarek-osman" target="_blank" rel="noopener" data-i18n="hero_cta">Jetzt Termin buchen</a></div>
       <h1>
-        <span data-i18n="hero_title_a">Ihre Fragen zur</span>
-        <em data-i18n="hero_title_b">Hernie</em>
-        <span data-i18n="hero_title_c">beantwortet.</span>
+        <span data-i18n="hero_title_a" style="font-family: Fraunces; letter-spacing: -1.5px; font-size: 45px"><span style="font-style: normal;"><span style="font-style: normal;">Ihre Fragen zur</span></span></span>
+        <em data-i18n="hero_title_b" style="font-size: 45px; color: #FAFFFE"><b style="font-family: Bebas Neue; color: #E7EFED">Hernie</b></em>
+        <span data-i18n="hero_title_c" style="font-size: 45px"><span style="font-style: normal;"><span style="font-style: normal;">beantwortet.</span></span></span>
       </h1>
-      <p class="hero-sub" data-i18n="hero_sub">Stellen Sie Ihre Frage – unser Assistent durchsucht alle medizinischen Informationen und führt Sie direkt zur richtigen Antwort.</p>
+      <p class="hero-sub" data-i18n="hero_sub" style="color:#1A2342;background-color:#FFFFFF34;border-radius:10px">Stellen Sie Ihre Frage – unser Assistent hilft Ihnen dabei.</p>
+
 
       <div class="searchbox">
         <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
@@ -76,7 +80,7 @@
 
       <div class="disclaimer">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
-        <span data-i18n="disclaimer">Diese Informationen ersetzen keine ärztliche Beratung.</span>
+        <span data-i18n="disclaimer" style="color: #EDEEF0">Diese Informationen ersetzen keine ärztliche Beratung.</span>
       </div>
 
       <div class="hero-shortcuts">
@@ -97,6 +101,21 @@
           <span class="shortcut-text" data-i18n="sc_contact">Praxis kontaktieren</span>
         </button>
       </div>
+
+      <div class="rf-box" style="background-color:#FFFFFF;border-radius:8px;border:2px solid #DB3333;left:269px">
+        <span class="rf-label" data-i18n="rf_label" style="color:#DC2A25"><b>Wann muss man sofort ins Krankenhaus?</b></span>
+        <div class="rf-pop" style="left:-95px">
+          <p class="rf-lead" data-i18n="rf_lead" style="font-size:15.5px;color:#421E1A">Diese Anzeichen deuten auf einen medizinischen <b>Notfall</b> hin:</p>
+          <ul>
+            <li data-i18n="rf_1">Plötzlicher, starker Schmerz an der Bruchstelle</li>
+            <li data-i18n="rf_2">Die Vorwölbung ist hart und lässt sich nicht mehr zurückdrücken</li>
+            <li data-i18n="rf_3">Übelkeit oder Erbrechen</li>
+            <li data-i18n="rf_4">Kein Stuhlgang oder kein Abgang von Winden</li>
+          </ul>
+          <p class="rf-cta" data-i18n="rf_cta" style="color:#D02D2D"><b>→ Suchen Sie in diesem Fall umgehend die nächste Notaufnahme auf.</b></p>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -105,7 +124,7 @@
     <div class="container">
       <div class="trust-grid">
         <div class="trust-item">
-          <img src="assets/dhg-siegel.jpg" alt="DHG Siegel">
+          <img src="assets/dhg-siegel.png" alt="DHG Siegel">
           <div class="trust-item-text">
             <strong data-i18n="trust_dhg">DHG-zertifiziertes Hernienzentrum</strong>
             <span data-i18n="trust_dhg_sub">Qualitätsgesicherte Hernienchirurgie</span>
@@ -242,7 +261,7 @@
           </div>
           <div class="contact-card-titles">
             <span class="ctype" data-i18n="type_practice">Praxis</span>
-            <h3>OC Ludwigshafen</h3>
+            <h3>Standort Ludwigshafen</h3>
           </div>
         </div>
         <p class="addr">Berthold-Schwarz-Str. 26<br>67063 Ludwigshafen-Friesenheim</p>
@@ -269,7 +288,7 @@
           </div>
           <div class="contact-card-titles">
             <span class="ctype" data-i18n="type_practice">Praxis</span>
-            <h3>OC Mutterstadt</h3>
+            <h3>Standort Mutterstadt</h3>
           </div>
         </div>
         <p class="addr">Oggersheimer Straße 42<br>67112 Mutterstadt</p>
@@ -296,7 +315,7 @@
           </div>
           <div class="contact-card-titles">
             <span class="ctype" data-i18n="type_clinic">Klinik (OP)</span>
-            <h3>Apollonia Kurpfalzklinik</h3>
+            <h3>Apollonia Klinik</h3>
           </div>
         </div>
         <p class="addr">Ludwigshafen am Rhein<br><span data-i18n="addr_apollonia">Ambulante Hernienchirurgie</span></p>
@@ -392,6 +411,52 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+
+<!-- ========== PAGE: DOWNLOADS ========== -->
+<section class="page" id="page-downloads">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow" data-i18n="dl_eyebrow">Download-Zentrum</div>
+      <h2 data-i18n="dl_title">Unterlagen zum Ausdrucken</h2>
+      <p class="section-sub" data-i18n="dl_sub">Alle Materialien als PDF. Sie können sie bequem zu Hause ausdrucken und ausfüllen.</p>
+    </div>
+    <div class="dl-grid">
+      <article class="dl-card">
+        <div class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg></div>
+        <div class="dl-body">
+          <h3 data-i18n="dl_prep">OP-Vorbereitung</h3>
+          <p data-i18n="dl_prep_sub">Was Sie vor dem Eingriff wissen und mitbringen müssen.</p>
+        </div>
+        <span class="dl-pending" data-i18n="dl_pending">Bald verfügbar</span>
+      </article>
+      <article class="dl-card">
+        <div class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <div class="dl-body">
+          <h3 data-i18n="dl_check">Checkliste</h3>
+          <p data-i18n="dl_check_sub">Zum Ausdrucken und Ausfüllen vor Ihrem Termin.</p>
+        </div>
+        <span class="dl-pending" data-i18n="dl_pending">Bald verfügbar</span>
+      </article>
+      <article class="dl-card">
+        <div class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v8M8 12h8M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/></svg></div>
+        <div class="dl-body">
+          <h3 data-i18n="dl_after">Die Nachbehandlung</h3>
+          <p data-i18n="dl_after_sub">Verhalten, Belastung und Wundpflege nach der Operation.</p>
+        </div>
+        <span class="dl-pending" data-i18n="dl_pending">Bald verfügbar</span>
+      </article>
+      <article class="dl-card">
+        <div class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM12 16v.01M12 8a2 2 0 0 1 1 3.7c-.6.4-1 .8-1 1.3"/></svg></div>
+        <div class="dl-body">
+          <h3 data-i18n="dl_what">Was ist ein Leistenbruch</h3>
+          <p data-i18n="dl_what_sub">Verständlich erklärt: Ursachen, Symptome, Behandlung.</p>
+        </div>
+        <span class="dl-pending" data-i18n="dl_pending">Bald verfügbar</span>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -654,6 +719,7 @@
         <a href="#about" data-page-link data-page="about" data-i18n="nav_about">Über mich</a>
         <a href="#types" data-page-link data-page="types" data-i18n="nav_types">Hernienarten</a>
         <a href="#faq" data-page-link data-page="faq" data-i18n="nav_faq">FAQ</a>
+        <a href="#downloads" data-page-link data-page="downloads" data-i18n="nav_downloads">Downloads</a>
         <a href="#contact" data-page-link data-page="contact" data-i18n="nav_contact">Kontakt</a>
       </div>
       <div class="footer-col">

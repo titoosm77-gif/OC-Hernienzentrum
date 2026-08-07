@@ -410,10 +410,15 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
         return;
       }
-      // Priority 2: rest of card -> open relevant FAQ category
+      // Priority 2: rest of card -> same as "Mehr Info" when a detail page exists
       const card = e.target.closest('.hernia-card');
       if (card) {
         const id = card.dataset.type;
+        if (card.querySelector('.more-info-btn')) {
+          showPage(id + '-detail');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          return;
+        }
         state.cat = id;
         showPage('faq');
         renderFaqCategories();
