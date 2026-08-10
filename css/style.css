@@ -207,20 +207,23 @@ html[dir="rtl"] .brand-tag {
 @media (max-width: 1100px) {
   .nav-main {
     position: fixed;
-    inset: 70px 0 0 0;
+    inset: 0;
     background: #fff;
+    z-index: 200;
+    overflow-y: auto;
+    box-shadow: none;
     flex-direction: column;
-    padding: 24px;
-    gap: 4px;
+    padding: 84px 20px 24px;
+    gap: 2px;
     transform: translateX(100%);
     transition: transform .3s ease;
     align-items: stretch;
   }
   html[dir="rtl"] .nav-main { transform: translateX(-100%); }
   .nav-main.open { transform: translateX(0); }
-  .nav-main a { padding: 14px 16px; font-size: 16px; }
+  .nav-main a { padding: 11px 14px; font-size: 15.5px; }
   .nav-main a.active::after { display: none; }
-  .menu-toggle { display: flex; }
+  .menu-toggle { display: flex; position: relative; z-index: 210; }
   .brand-tag { display: none; }
 }
 
@@ -435,6 +438,9 @@ html[dir="rtl"] .search-result { text-align: right; }
 html[dir="rtl"] .rf-pop ul{padding-left:0;padding-right:20px}
 
 /* Hero CTA */
+.hero{min-height:811px;padding:63px 38px 63px 82px}
+@media(max-width:900px){.hero{min-height:0;padding:44px 20px 52px}}
+@media(max-width:640px){.hero{padding:34px 16px 44px}.hero-sub{font-size:16px;margin:18px 0}.rf-box{left:0!important;width:100%;margin-top:14px}.rf-pop{left:0!important;width:100%;max-width:100%}}
 .hero-cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;margin:0 0 20px;padding:6px 14px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:.02em;background:var(--teal-600,#0d9488);color:#fff;text-decoration:none;box-shadow:0 6px 16px rgba(13,148,136,.3);transition:background .2s,transform .2s,box-shadow .2s}
 .hero-cta:hover{background:var(--teal-700,#0f766e);color:#fff;transform:translateY(-1px);box-shadow:0 8px 20px rgba(13,148,136,.4)}
 .hero-cta-row{display:block}
@@ -1358,3 +1364,7 @@ html[dir="rtl"] .rf-pop,html[dir="rtl"] .rf-pop li,html[dir="rtl"] .rf-lead,html
 .dl-link{display:inline-flex;align-items:center;gap:7px;margin-top:9px;color:var(--teal-600,#0d9488);font-size:13.5px;font-weight:700;text-decoration:none}
 .dl-link:hover{color:var(--teal-700,#0f766e);text-decoration:underline}
 @media print{#page-downloads .dl-pending{display:none}}
+
+.trust-reviews{text-decoration:none;color:inherit;border-radius:12px;transition:background .2s,transform .2s}
+.trust-reviews:hover{background:var(--navy-50);color:inherit;transform:translateY(-2px)}
+.trust-reviews:hover .trust-item-text strong{color:var(--teal-700,#0f766e)}

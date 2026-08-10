@@ -51,6 +51,7 @@ const I18N = {
     trust_exp_sub: 'Erfahrung in offenen & laparoskopischen Verfahren',
     trust_loc: '2 Standorte in der Region',
     trust_loc_sub: 'Ludwigshafen & Mutterstadt',
+    trust_reviews: 'Meine Bewertungen', trust_reviews_sub: 'Was unsere Patienten sagen',
 
     // Search
     search_no: 'Zu Ihrer Frage konnten wir leider keine passende Antwort finden. Bitte wenden Sie sich direkt an unsere Praxis.',
@@ -267,6 +268,7 @@ const I18N = {
     trust_exp_sub: 'Open & laparoscopic experience',
     trust_loc: '2 locations in the region',
     trust_loc_sub: 'Ludwigshafen & Mutterstadt',
+    trust_reviews: 'My reviews', trust_reviews_sub: 'What our patients say',
 
     search_no: 'Sorry, we could not find a matching answer to your question. Please contact our practice directly.',
     search_full: 'Read the full answer in FAQ →',
@@ -480,7 +482,8 @@ const I18N = {
     trust_exp_sub: 'خبرة في الجراحة المفتوحة والمنظارية',
     trust_loc: 'موقعان في المنطقة',
     trust_loc_sub: 'Ludwigshafen و Mutterstadt',
-
+    trust_loc_sub: 'Ludwigshafen و Mutterstadt',
+    trust_reviews: 'تقييماتي', trust_reviews_sub: 'ما يقوله مرضانا',
     search_no: 'عذراً، لم نتمكن من العثور على إجابة مناسبة لسؤالك. يرجى التواصل مع عيادتنا مباشرة.',
     search_full: 'الإجابة الكاملة في الأسئلة الشائعة ←',
 
@@ -688,6 +691,7 @@ const I18N = {
     trust_exp_sub: 'Açık ve laparoskopik deneyim',
     trust_loc: 'Bölgede 2 lokasyon',
     trust_loc_sub: 'Ludwigshafen & Mutterstadt',
+    trust_reviews: 'Yorumlarım', trust_reviews_sub: 'Hastalarımız ne diyor',
 
     search_no: 'Maalesef sorunuza uygun bir cevap bulamadık. Lütfen muayenehanemizle doğrudan iletişime geçin.',
     search_full: 'SSS\'de tam cevabı oku →',
