@@ -30,7 +30,7 @@
       <a href="#about" data-page="about" data-i18n="nav_about">Über mich</a>
       <a href="#types" data-page="types" data-i18n="nav_types">Hernienarten</a>
       <a href="#faq" data-page="faq" data-i18n="nav_faq">FAQ</a>
-      <a href="#contact" data-page="contact" data-i18n="nav_contact">Kontakt</a>
+      <a href="#contact" data-page="contact" data-i18n="nav_contact" style="overflow: visible; background-color: #FFFFFF">Kontakt</a>
       <a href="#downloads" data-page="downloads" data-i18n="nav_downloads">Downloads</a>
       <a href="#imprint" data-page="imprint" data-i18n="nav_imprint">Impressum</a>
     </nav>
@@ -199,10 +199,16 @@
           </div>
         </div>
 
+        <div class="about-links">
         <a href="#cv" data-page-link data-page="cv" class="cv-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/><line x1="9" y1="11" x2="15" y2="11"/></svg>
           <span data-i18n="cv_link">Vollständigen Lebenslauf ansehen</span>
         </a>
+        <a href="#press" data-page-link data-page="press" class="cv-link cv-link-alt">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9h4"/><path d="M18 14h-8M18 18h-8M18 6h-8v4h8V6Z"/></svg>
+          <span data-i18n="press_link">In der Presse</span>
+        </a>
+        </div>
       </div>
     </div>
   </div>
@@ -714,6 +720,71 @@
     </div>
   </div>
 </section>
+
+
+<!-- ========== PAGE: PRESSE ========== -->
+<section class="page" id="page-press">
+  <div class="container">
+    <div class="press-page">
+      <button class="back-link" data-page-link data-page="about">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span data-i18n="back_to_about">Zurück zu Über mich</span>
+      </button>
+      <div class="section-eyebrow" data-i18n="press_eyebrow">Pressespiegel</div>
+      <h1>
+        <span data-i18n="press_title_a">In der</span>
+        <em data-i18n="press_title_b"><span style="font-style: normal;">Presse</span></em>
+      </h1>
+      <p class="press-intro" data-i18n="press_intro">Berichte aus regionalen und überregionalen Medien über die Zertifizierung als Kompetenzzentrum für Hernienchirurgie und moderne minimalinvasive Operationsverfahren.</p>
+      <div class="press-grid">
+        <button class="press-card" data-press="uploads/Osman Presse .jpg">
+          <span class="press-thumb"><img src="uploads/Osman Presse .jpg" alt="" loading="lazy"></span>
+          <span class="press-body">
+            <span class="press-meta" data-i18n="press_1_meta">Klinikmagazin GRN</span>
+            <span class="press-head" data-i18n="press_1_head">Qualitätssiegel der Deutschen Gesellschaft für Allgemein- und Viszeralchirurgie</span>
+            <span class="press-sum" data-i18n="press_1_sum">Die Chirurgie der GRN-Klinik Schwetzingen wird als Kompetenzzentrum für Hernienchirurgie anerkannt. Jährlich rund 400 Leisten-, Narben-, Nabel- und Zwerchfellbrüche werden nach aktuellen Leitlinien versorgt.</span>
+            <span class="press-open" data-i18n="press_open">Artikel vergrößern</span>
+          </span>
+        </button>
+        <button class="press-card" data-press="uploads/Osman Presse 2.jpg">
+          <span class="press-thumb"><img src="uploads/Osman Presse 2.jpg" alt="" loading="lazy"></span>
+          <span class="press-body">
+            <span class="press-meta" data-i18n="press_2_meta">Schwetzinger Zeitung · 23. Mai 2018</span>
+            <span class="press-head" data-i18n="press_2_head">Ganz kleine Schnitte bei Brüchen</span>
+            <span class="press-sum" data-i18n="press_2_sum">Bericht über die E-MILOS-Methode: Statt eines langen Schnitts über dem Bruch genügt ein vier bis acht Zentimeter kleiner Zugang, auch bei großen Bauchwandbrüchen.</span>
+            <span class="press-open" data-i18n="press_open">Artikel vergrößern</span>
+          </span>
+        </button>
+        <button class="press-card" data-press="uploads/Osman Presse 3.jpg">
+          <span class="press-thumb"><img src="uploads/Osman Presse 3.jpg" alt="" loading="lazy"></span>
+          <span class="press-body">
+            <span class="press-meta" data-i18n="press_3_meta">GRN Gesundheitsmagazin</span>
+            <span class="press-head" data-i18n="press_3_head">Moderne minimalinvasive Verfahren auch bei großen Brüchen</span>
+            <span class="press-sum" data-i18n="press_3_sum">Ausführlicher Beitrag zur Zertifizierung und zur Qualitätssicherung: verpflichtende Teilnahme an der Herniamed-Studie, regelmäßige Weiterbildung und dokumentierte Nachkontrollen.</span>
+            <span class="press-open" data-i18n="press_open">Artikel vergrößern</span>
+          </span>
+        </button>
+        <button class="press-card" data-press="uploads/Osman Presse 4.jpg">
+          <span class="press-thumb"><img src="uploads/Osman Presse 4.jpg" alt="" loading="lazy"></span>
+          <span class="press-body">
+            <span class="press-meta" data-i18n="press_4_meta">Internet-Zeitung Schwetzingen und Umland</span>
+            <span class="press-head" data-i18n="press_4_head">Chirurgie der GRN-Kreisklinik mit Qualitätssiegel ausgezeichnet</span>
+            <span class="press-sum" data-i18n="press_4_sum">Nur 23 Kliniken in Baden-Württemberg haben die Qualitätsprüfung bestanden. Dr. Tarek Osman verantwortet die Einführung und Umsetzung der strengen Vorgaben zur Qualitätssicherung.</span>
+            <span class="press-open" data-i18n="press_open">Artikel vergrößern</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PRESS LIGHTBOX ========== -->
+<div class="press-lightbox" id="pressLightbox" hidden>
+  <button class="press-lightbox-close" id="pressLightboxClose" aria-label="Schließen">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <img id="pressLightboxImg" alt="">
+</div>
 
 <!-- ========== FOOTER ========== -->
 <footer class="site-footer">

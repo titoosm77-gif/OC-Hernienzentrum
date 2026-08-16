@@ -430,6 +430,22 @@
       }
     });
 
+    const lb = document.getElementById('pressLightbox');
+    const lbImg = document.getElementById('pressLightboxImg');
+    if (lb) {
+      document.querySelectorAll('.press-card').forEach(card => {
+        card.addEventListener('click', () => {
+          lbImg.src = card.dataset.press;
+          lb.hidden = false;
+          document.body.style.overflow = 'hidden';
+        });
+      });
+      const closeLb = () => { lb.hidden = true; lbImg.removeAttribute('src'); document.body.style.overflow = ''; };
+      lb.addEventListener('click', (e) => { if (e.target !== lbImg) closeLb(); });
+      document.getElementById('pressLightboxClose').addEventListener('click', closeLb);
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !lb.hidden) closeLb(); });
+    }
+
     setupSearch();
     applyLang();
     showPage('home');
