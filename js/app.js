@@ -430,6 +430,32 @@
       }
     });
 
+    // Dokument-Leser
+    const reader = document.getElementById('docReader');
+    if (reader && window.OC_DOCS) {
+      const sheet = document.getElementById('docSheet');
+      const practice = 'Orthopädie und Unfallchirurgie, D-Arzt, Allgemein- und Viszeralchirurgie, Zentrum für Hernienchirurgie, Proktologie, Varizenchirurgie, Akupunktur, Chirotherapie, Schmerztherapie, ambulante und stationäre Operationen';
+      const sign = '<div class="doc-sign"><p>Bei weiteren Fragen oder Unklarheiten stehen wir Ihnen jederzeit zur Verfügung.</p><p><strong>Dr. med. Tarek Osman</strong><br>Facharzt für Allgemein- und Viszeralchirurgie<br>Leiter des Hernienzentrums</p></div>';
+      const openDoc = (id) => {
+        const d = window.OC_DOCS[id];
+        if (!d) return;
+        sheet.innerHTML = '<div class="doc-head"><div class="doc-practice">' + practice + '</div><h1>' + d.title + '</h1></div>' + d.html + sign;
+        reader.hidden = false;
+        document.documentElement.classList.add('doc-open');
+        document.body.style.overflow = 'hidden';
+        document.querySelector('.doc-scroll').scrollTop = 0;
+      };
+      const closeDoc = () => {
+        reader.hidden = true;
+        document.documentElement.classList.remove('doc-open');
+        document.body.style.overflow = '';
+      };
+      document.querySelectorAll('[data-doc]').forEach(b => b.addEventListener('click', () => openDoc(b.dataset.doc)));
+      document.getElementById('docClose').addEventListener('click', closeDoc);
+      document.getElementById('docPdf').addEventListener('click', () => window.print());
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !reader.hidden) closeDoc(); });
+    }
+
     const lb = document.getElementById('pressLightbox');
     const lbImg = document.getElementById('pressLightboxImg');
     if (lb) {
