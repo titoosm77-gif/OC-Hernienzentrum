@@ -121,6 +121,12 @@ const I18N = {
 
     // Presse
     press_link: 'In der Presse',
+    social_link: 'Dr. Osman in den sozialen Medien',
+    social_eyebrow: 'Social Media',
+    social_title_a: 'Dr. Osman in den',
+    social_title_b: '<span style="font-style:normal">sozialen Medien</span>',
+    social_intro: 'Kurze Videos zu Hernien, Operationsverfahren und Fragen aus der Sprechstunde. Wählen Sie eine Plattform.',
+    social_empty: 'Die Videoübersicht wird gerade zusammengestellt. Bis dahin finden Sie alle Beiträge direkt im Profil:',
     press_eyebrow: 'Pressespiegel',
     press_title_a: 'In der',
     press_title_b: '<span style="font-style: normal;">Presse</span>',
@@ -359,6 +365,12 @@ const I18N = {
 
     // Press
     press_link: 'In the Press',
+    social_link: 'Dr. Osman on social media',
+    social_eyebrow: 'Social Media',
+    social_title_a: 'Dr. Osman on',
+    social_title_b: '<span style="font-style:normal">social media</span>',
+    social_intro: 'Short videos on hernias, surgical techniques and questions from the consultation. Choose a platform.',
+    social_empty: 'The video overview is being compiled. In the meantime you will find all posts directly on the profile:',
     press_eyebrow: 'Press Review',
     press_title_a: 'In the',
     press_title_b: '<span style="font-style: normal;">Press</span>',
@@ -597,6 +609,12 @@ const I18N = {
 
     // Press
     press_link: 'في الصحافة',
+    social_link: 'د. عثمان على وسائل التواصل',
+    social_eyebrow: 'وسائل التواصل الاجتماعي',
+    social_title_a: 'د. عثمان على',
+    social_title_b: '<span style="font-style:normal">وسائل التواصل</span>',
+    social_intro: 'مقاطع قصيرة عن الفتق وطرق الجراحة وأسئلة من العيادة. اختر منصة.',
+    social_empty: 'يتم حالياً إعداد قائمة المقاطع. حتى ذلك الحين تجدون جميع المنشورات في الملف الشخصي:',
     press_eyebrow: 'المقالات الصحفية',
     press_title_a: 'في',
     press_title_b: '<span style="font-style: normal;">الصحافة</span>',
@@ -830,6 +848,12 @@ const I18N = {
 
     // Press
     press_link: 'Basında',
+    social_link: 'Dr. Osman sosyal medyada',
+    social_eyebrow: 'Sosyal Medya',
+    social_title_a: 'Dr. Osman',
+    social_title_b: '<span style="font-style:normal">sosyal medyada</span>',
+    social_intro: 'Fıtık, ameliyat yöntemleri ve muayenehaneden gelen sorular üzerine kısa videolar. Bir platform seçin.',
+    social_empty: 'Video listesi hazırlanıyor. O zamana kadar tüm paylaşımları doğrudan profilde bulabilirsiniz:',
     press_eyebrow: 'Basın Yansımaları',
     press_title_a: 'Basında',
     press_title_b: '<span style="font-style: normal;">Biz</span>',

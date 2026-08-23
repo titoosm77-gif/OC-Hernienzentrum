@@ -50,6 +50,7 @@
         el.innerHTML = val;
       }
     });
+    if (window.OC_renderSocial) window.OC_renderSocial();
     // Placeholder translations
     $$('[data-i18n-placeholder]').forEach(el => {
       el.placeholder = t(el.getAttribute('data-i18n-placeholder'));
@@ -429,6 +430,34 @@
         }, 250);
       }
     });
+
+    // Social-Media-Feed
+    const feed = document.getElementById('socialFeed');
+    if (feed && window.OC_SOCIAL) {
+      const renderFeed = (platform) => {
+        const p = window.OC_SOCIAL[platform];
+        if (!p.videos.length) {
+          feed.innerHTML = '<div class="social-empty">' + (t('social_empty') || '') + ' <a href="' + p.profile + '" target="_blank" rel="noopener">' + p.handle + '</a></div>';
+          return;
+        }
+        feed.innerHTML = p.videos.map(v =>
+          '<a class="social-item" href="' + v.url + '" target="_blank" rel="noopener">' +
+          '<span class="social-thumb">' + (v.thumb ? '<img src="' + v.thumb + '" alt="" loading="lazy">' : '') + '</span>' +
+          '<span class="social-title">' + v.title + '</span></a>'
+        ).join('');
+      };
+      document.querySelectorAll('.social-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          document.querySelectorAll('.social-tab').forEach(x => x.classList.toggle('active', x === tab));
+          renderFeed(tab.dataset.platform);
+        });
+      });
+      renderFeed('instagram');
+      window.OC_renderSocial = () => {
+        const active = document.querySelector('.social-tab.active');
+        if (active) renderFeed(active.dataset.platform);
+      };
+    }
 
     // Dokument-Leser
     const reader = document.getElementById('docReader');
