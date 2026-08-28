@@ -73,6 +73,7 @@
 
   // ===== Navigation =====
   function showPage(pageId) {
+    setTimeout(() => window.OC_markReveal && window.OC_markReveal(), 30);
     state.page = pageId;
     $$('.page').forEach(p => p.classList.toggle('active', p.id === 'page-' + pageId));
     $$('.nav-main a').forEach(a => a.classList.toggle('active', a.dataset.page === pageId));
@@ -500,6 +501,20 @@
       document.getElementById('pressLightboxClose').addEventListener('click', closeLb);
       document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !lb.hidden) closeLb(); });
     }
+
+    // Scroll-Reveal
+    (function OC_reveal(){
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+      const mark = () => {
+        document.querySelectorAll('.section-head, .trust-item, .hernia-card, .special-card, .contact-card, .dl-card, .press-card, .social-tab, .qr-block, .about-photo, .about-content, .cv-section, .faq-section, .imprint, .detail-page > *').forEach(el => {
+          if (!el.classList.contains('reveal')) { el.classList.add('reveal'); io.observe(el); }
+        });
+      };
+      mark();
+      window.OC_markReveal = mark;
+    })();
 
     setupSearch();
     applyLang();
