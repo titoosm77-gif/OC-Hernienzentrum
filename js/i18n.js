@@ -25,7 +25,7 @@ const I18N = {
     dl_what: 'Was ist ein Leistenbruch', dl_what_sub: 'Verständlich erklärt: Ursachen, Symptome, Behandlung.',
 
     // Hero
-    hero_cta: 'Jetzt Termin buchen',
+    hero_cta: 'Termin online buchen bei Doctolib',
     rf_label: '<b>Wann muss man sofort ins Krankenhaus?</b>',
     rf_lead: 'Diese Anzeichen deuten auf einen medizinischen <b>Notfall</b> hin:',
     rf_1: 'Plötzlicher, starker Schmerz an der Bruchstelle',
@@ -274,7 +274,7 @@ const I18N = {
     dl_after: 'Aftercare', dl_after_sub: 'Activity, strain and wound care after surgery.',
     dl_what: 'What is an inguinal hernia', dl_what_sub: 'Clearly explained: causes, symptoms, treatment.',
 
-    hero_cta: 'Book an appointment',
+    hero_cta: 'Book online via Doctolib',
     rf_label: '<b>When must you go to hospital immediately?</b>',
     rf_lead: 'These signs indicate a medical <b>emergency</b>:',
     rf_1: 'Sudden, severe pain at the hernia site',
@@ -518,7 +518,7 @@ const I18N = {
     dl_after: 'العلاج بعد العملية', dl_after_sub: 'الحركة والجهد والعناية بالجرح بعد العملية.',
     dl_what: 'ما هو الفتق الإربي', dl_what_sub: 'شرح مبسط: الأسباب والأعراض والعلاج.',
 
-    hero_cta: 'احجز موعدك',
+    hero_cta: 'احجز موعدك عبر Doctolib',
     rf_label: '<b>متى يجب الذهاب إلى المستشفى فوراً؟</b>',
     rf_lead: 'هذه العلامات تشير إلى <b>حالة طارئة</b> طبية:',
     rf_1: 'ألم مفاجئ وشديد في موضع الفتق',
@@ -757,7 +757,7 @@ const I18N = {
     dl_after: 'Ameliyat sonrası bakım', dl_after_sub: 'Ameliyattan sonra hareket, zorlanma ve yara bakımı.',
     dl_what: 'Kasık fıtığı nedir', dl_what_sub: 'Anlaşılır şekilde: nedenleri, belirtileri, tedavisi.',
 
-    hero_cta: 'Randevu alın',
+    hero_cta: 'Doctolib üzerinden randevu alın',
     rf_label: '<b>Ne zaman hemen hastaneye gitmeli?</b>',
     rf_lead: 'Bu belirtiler tıbbi bir <b>acil durumu</b> gösterir:',
     rf_1: 'Fıtık bölgesinde ani, şiddetli ağrı',

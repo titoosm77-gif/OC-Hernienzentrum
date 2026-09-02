@@ -1,0 +1,351 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/Button/**",
+              "components/Card/**",
+              "components/Eyebrow/**",
+              "components/FAQItem/**",
+              "components/Icon/**",
+              "components/InfoBox/**",
+              "components/Pill/**",
+              "components/SectionHead/**",
+              "components/TrustItem/**",
+              "ui_kits/web/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Fraunces|Manrope|Noto Naskh Arabic))/i]",
+        "message": "Font not provided by the design system. Available: Fraunces, Manrope, Noto Naskh Arabic."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|variant|size|icon|iconPosition|href|onClick|disabled|style|key|ref|className|style|children)$/]",
+        "message": "<Button> doesn't accept that prop. Declared props: children, variant, size, icon, iconPosition, href, onClick, disabled, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:primary|ghost)$/]",
+        "message": "<Button> variant must be one of 'primary' | 'ghost'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:md|lg)$/]",
+        "message": "<Button> size must be one of 'md' | 'lg'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='iconPosition'] > Literal[value!=/^(?:start|end)$/]",
+        "message": "<Button> iconPosition must be one of 'start' | 'end'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|accentBar|interactive|padding|onClick|style|key|ref|className|style|children)$/]",
+        "message": "<Card> doesn't accept that prop. Declared props: children, accentBar, interactive, padding, onClick, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Eyebrow'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|variant|icon|style|key|ref|className|style|children)$/]",
+        "message": "<Eyebrow> doesn't accept that prop. Declared props: children, variant, icon, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Eyebrow'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:plain|pill)$/]",
+        "message": "<Eyebrow> variant must be one of 'plain' | 'pill'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='FAQItem'] > JSXAttribute > JSXIdentifier[name!=/^(?:question|children|defaultOpen|open|onToggle|dir|style|key|ref|className|style|children)$/]",
+        "message": "<FAQItem> doesn't accept that prop. Declared props: question, children, defaultOpen, open, onToggle, dir, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='FAQItem'] > JSXAttribute[name.name='dir'] > Literal[value!=/^(?:ltr|rtl)$/]",
+        "message": "<FAQItem> dir must be one of 'ltr' | 'rtl'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Icon'] > JSXAttribute > JSXIdentifier[name!=/^(?:name|size|strokeWidth|color|style|key|ref|className|style|children)$/]",
+        "message": "<Icon> doesn't accept that prop. Declared props: name, size, strokeWidth, color, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='InfoBox'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|tone|title|dir|style|key|ref|className|style|children)$/]",
+        "message": "<InfoBox> doesn't accept that prop. Declared props: children, tone, title, dir, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='InfoBox'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:info|warning|danger)$/]",
+        "message": "<InfoBox> tone must be one of 'info' | 'warning' | 'danger'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='InfoBox'] > JSXAttribute[name.name='dir'] > Literal[value!=/^(?:ltr|rtl)$/]",
+        "message": "<InfoBox> dir must be one of 'ltr' | 'rtl'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Pill'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|active|onClick|size|style|key|ref|className|style|children)$/]",
+        "message": "<Pill> doesn't accept that prop. Declared props: children, active, onClick, size, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Pill'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:md|sm)$/]",
+        "message": "<Pill> size must be one of 'md' | 'sm'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionHead'] > JSXAttribute > JSXIdentifier[name!=/^(?:eyebrow|title|accent|titleEnd|sub|align|level|style|key|ref|className|style|children)$/]",
+        "message": "<SectionHead> doesn't accept that prop. Declared props: eyebrow, title, accent, titleEnd, sub, align, level, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionHead'] > JSXAttribute[name.name='align'] > Literal[value!=/^(?:center|left)$/]",
+        "message": "<SectionHead> align must be one of 'center' | 'left'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TrustItem'] > JSXAttribute > JSXIdentifier[name!=/^(?:logoSrc|icon|tone|claim|detail|style|key|ref|className|style|children)$/]",
+        "message": "<TrustItem> doesn't accept that prop. Declared props: logoSrc, icon, tone, claim, detail, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TrustItem'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:teal|navy)$/]",
+        "message": "<TrustItem> tone must be one of 'teal' | 'navy'."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "Button": {
+        "replaces": []
+      },
+      "Card": {
+        "replaces": []
+      },
+      "Eyebrow": {
+        "replaces": []
+      },
+      "FAQItem": {
+        "replaces": []
+      },
+      "Icon": {
+        "replaces": []
+      },
+      "InfoBox": {
+        "replaces": []
+      },
+      "Pill": {
+        "replaces": []
+      },
+      "SectionHead": {
+        "replaces": []
+      },
+      "TrustItem": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--bg",
+      "--bg-warm",
+      "--body-color",
+      "--body-lh",
+      "--body-size",
+      "--danger",
+      "--ease",
+      "--eyebrow-color",
+      "--eyebrow-size",
+      "--eyebrow-track",
+      "--eyebrow-weight",
+      "--font-arabic",
+      "--font-body",
+      "--font-display",
+      "--h1-lh",
+      "--h1-size",
+      "--h1-style",
+      "--h1-track",
+      "--h1-weight",
+      "--h2-detail-size",
+      "--h2-detail-weight",
+      "--h2-lh",
+      "--h2-size",
+      "--h2-style",
+      "--h2-track",
+      "--h2-weight",
+      "--h3-lh",
+      "--h3-size",
+      "--h3-track",
+      "--h3-weight",
+      "--h4-family",
+      "--h4-size",
+      "--h4-weight",
+      "--ink",
+      "--ink-mute",
+      "--ink-soft",
+      "--line",
+      "--line-soft",
+      "--maxw",
+      "--navy-100",
+      "--navy-50",
+      "--navy-500",
+      "--navy-600",
+      "--navy-700",
+      "--navy-800",
+      "--navy-900",
+      "--ok",
+      "--p-color",
+      "--p-lh",
+      "--p-size",
+      "--r",
+      "--r-lg",
+      "--r-pill",
+      "--r-sm",
+      "--r-xl",
+      "--s-1",
+      "--s-10",
+      "--s-12",
+      "--s-2",
+      "--s-3",
+      "--s-4",
+      "--s-5",
+      "--s-6",
+      "--s-7",
+      "--s-8",
+      "--s-9",
+      "--shadow",
+      "--shadow-button-navy",
+      "--shadow-focus-teal",
+      "--shadow-lg",
+      "--shadow-sm",
+      "--small-color",
+      "--small-size",
+      "--surface",
+      "--t",
+      "--t-fast",
+      "--t-med",
+      "--t-slow",
+      "--tag-size",
+      "--tag-track",
+      "--tag-weight",
+      "--teal-100",
+      "--teal-50",
+      "--teal-500",
+      "--teal-600",
+      "--teal-700",
+      "--warn"
+    ],
+    "tokenKinds": {
+      "--navy-900": "color",
+      "--navy-800": "color",
+      "--navy-700": "color",
+      "--navy-600": "color",
+      "--navy-500": "color",
+      "--navy-100": "color",
+      "--navy-50": "color",
+      "--teal-700": "color",
+      "--teal-600": "color",
+      "--teal-500": "color",
+      "--teal-100": "color",
+      "--teal-50": "color",
+      "--bg": "color",
+      "--bg-warm": "color",
+      "--surface": "color",
+      "--ink": "color",
+      "--ink-soft": "color",
+      "--ink-mute": "color",
+      "--line": "color",
+      "--line-soft": "color",
+      "--danger": "color",
+      "--warn": "color",
+      "--ok": "color",
+      "--font-display": "font",
+      "--font-body": "font",
+      "--font-arabic": "font",
+      "--h1-size": "spacing",
+      "--h1-weight": "font",
+      "--h1-style": "font",
+      "--h1-track": "spacing",
+      "--h1-lh": "font",
+      "--h2-size": "spacing",
+      "--h2-weight": "font",
+      "--h2-style": "font",
+      "--h2-track": "spacing",
+      "--h2-lh": "font",
+      "--h2-detail-size": "spacing",
+      "--h2-detail-weight": "font",
+      "--h3-size": "spacing",
+      "--h3-weight": "font",
+      "--h3-track": "spacing",
+      "--h3-lh": "font",
+      "--h4-size": "spacing",
+      "--h4-weight": "font",
+      "--h4-family": "color",
+      "--body-size": "spacing",
+      "--body-lh": "font",
+      "--body-color": "color",
+      "--p-size": "spacing",
+      "--p-color": "color",
+      "--p-lh": "font",
+      "--small-size": "spacing",
+      "--small-color": "color",
+      "--eyebrow-size": "spacing",
+      "--eyebrow-weight": "font",
+      "--eyebrow-track": "spacing",
+      "--eyebrow-color": "color",
+      "--tag-size": "spacing",
+      "--tag-weight": "font",
+      "--tag-track": "spacing",
+      "--r-sm": "spacing",
+      "--r": "spacing",
+      "--r-lg": "spacing",
+      "--r-xl": "spacing",
+      "--r-pill": "spacing",
+      "--shadow-sm": "shadow",
+      "--shadow": "shadow",
+      "--shadow-lg": "shadow",
+      "--shadow-focus-teal": "shadow",
+      "--shadow-button-navy": "shadow",
+      "--s-1": "spacing",
+      "--s-2": "spacing",
+      "--s-3": "spacing",
+      "--s-4": "spacing",
+      "--s-5": "spacing",
+      "--s-6": "spacing",
+      "--s-7": "spacing",
+      "--s-8": "spacing",
+      "--s-9": "spacing",
+      "--s-10": "spacing",
+      "--s-12": "spacing",
+      "--maxw": "spacing",
+      "--t-fast": "other",
+      "--t": "other",
+      "--t-med": "other",
+      "--t-slow": "other",
+      "--ease": "other"
+    },
+    "fontFamilies": [
+      "Fraunces",
+      "Manrope",
+      "Noto Naskh Arabic"
+    ]
+  }
+}
