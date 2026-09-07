@@ -93,28 +93,28 @@ const FAQ_PART2 = [
 { id:'n03', cat:'nachbehandlung',
   q:{ de:'Wie lange muss ich nach der Operation bleiben?', en:'How long do I have to stay?', ar:'كم سأبقى؟', tr:'Ne kadar kalırım?' },
   a:{
-    de:'<ul><li><strong>Ambulant:</strong> Entlassung am gleichen Tag (nach ca. 2–4 Stunden)</li><li><strong>Stationär:</strong> meist 1 Tag, bei großen Narbenhernien ggf. 2–3 Tage</li></ul>',
-    en:'<ul><li><strong>Outpatient:</strong> discharge same day (after ~2–4 hours)</li><li><strong>Inpatient:</strong> usually 1 day; large incisional hernias 2–3 days</li></ul>',
-    ar:'<ul><li><strong>نهاري:</strong> الخروج نفس اليوم (بعد 2–4 ساعات)</li><li><strong>داخلي:</strong> عادةً يوم، للفتوق الندبية الكبيرة 2–3 أيام</li></ul>',
-    tr:'<ul><li><strong>Ayakta:</strong> aynı gün (2–4 saat sonra)</li><li><strong>Yatarak:</strong> genellikle 1 gün, büyük insizyonelde 2–3 gün</li></ul>'
+    de:'<ul><li><strong>Ambulant:</strong> Entlassung am gleichen Tag (nach ca. 1–6 Stunden)</li><li><strong>Stationär:</strong> meist 1 Tag, bei großen Narbenhernien ggf. 2–3 Tage</li></ul>',
+    en:'<ul><li><strong>Outpatient:</strong> discharge same day (after ~1–6 hours)</li><li><strong>Inpatient:</strong> usually 1 day; large incisional hernias 2–3 days</li></ul>',
+    ar:'<ul><li><strong>نهاري:</strong> الخروج نفس اليوم (بعد 1–6 ساعات)</li><li><strong>داخلي:</strong> عادةً يوم، للفتوق الندبية الكبيرة 2–3 أيام</li></ul>',
+    tr:'<ul><li><strong>Ayakta:</strong> aynı gün (1–6 saat sonra)</li><li><strong>Yatarak:</strong> genellikle 1 gün, büyük insizyonelde 2–3 gün</li></ul>'
   }},
 
 { id:'n04', cat:'nachbehandlung',
   q:{ de:'Was darf ich in den ersten Tagen nach der OP essen und trinken?', en:'What can I eat in the first days?', ar:'ماذا آكل في الأيام الأولى؟', tr:'İlk günlerde ne yiyebilirim?' },
   a:{
-    de:'<p>Schon am OP-Tag dürfen Sie trinken, sobald Sie vollständig wach sind. Leichte Kost (Suppe, Toast, Joghurt) ist anfangs empfehlenswert. Am nächsten Tag normale Ernährung möglich.</p>',
-    en:'<p>You may drink on the day of surgery as soon as you are fully awake. Light food (soup, toast, yoghurt) at first. Normal diet next day.</p>',
-    ar:'<p>يمكنك الشرب يوم العملية بمجرد الاستيقاظ. طعام خفيف أولاً. اليوم التالي أكل عادي.</p>',
-    tr:'<p>Ameliyat günü tam uyanır uyanmaz içebilirsiniz. Önce hafif yemek. Ertesi gün normal beslenme.</p>'
-  }},
+    "de": "<p>Am Operationstag entscheidet das Behandlungsteam, wann Sie wieder trinken und essen dürfen. Ab dem ersten Tag nach der Operation ist leicht verdauliche Kost vorgesehen. Trinken Sie ausreichend entsprechend den ärztlichen Vorgaben.</p>",
+    "en": "<p>On the day of surgery, your care team will tell you when you may drink and eat again. Easily digestible food is recommended from the first day after surgery. Drink enough, following your medical instructions.</p>",
+    "ar": "<p>يحدّد فريق العلاج متى يمكنك الشرب والأكل يوم العملية. بدءًا من اليوم الأول بعد العملية يُنصح بطعام سهل الهضم. اشرب كمية كافية وفق تعليمات الطبيب.</p>",
+    "tr": "<p>Ameliyat günü ne zaman içip yiyebileceğinizi tedavi ekibi belirler. Ameliyattan sonraki ilk günden itibaren kolay sindirilen yiyecekler önerilir. Hekiminizin talimatlarına göre yeterli sıvı alın.</p>"
+}},
 
 { id:'n05', cat:'nachbehandlung',
   q:{ de:'Wie soll ich die Wunde pflegen?', en:'How should I care for the wound?', ar:'كيف أعتني بالجرح؟', tr:'Yarayı nasıl bakım yapmalıyım?' },
   a:{
-    de:'<ul><li>Wundverband spätestens alle 2 Tage wechseln oder nach Anweisung</li><li>In den ersten 3–4 Tagen die Wunde 4–5×/Tag jeweils 10–15 Minuten kühlen</li><li>Wunde trocken halten (kein Baden, Schwimmen) bis zur Abheilung (ca. 2 Wochen)</li><li>Duschen ab dem 2. Tag erlaubt (kurz, Wunde nicht direkt nass machen)</li><li>Rötung, Schwellung, Eiter → <strong>Arzt aufsuchen!</strong></li></ul>',
-    en:'<ul><li>Change dressing every 2 days or as instructed</li><li>First 3–4 days: cool wound 4–5×/day for 10–15 min</li><li>Keep wound dry (no baths/swimming) until healed (~2 weeks)</li><li>Showering from day 2 (briefly)</li><li>Redness, swelling, pus → <strong>see your doctor!</strong></li></ul>',
-    ar:'<ul><li>غيّر الضمادة كل يومين</li><li>أول 3–4 أيام: تبريد 4–5 مرات/يوم لـ10–15 دقيقة</li><li>أبقِ الجرح جافاً حتى الشفاء</li><li>الاستحمام من اليوم الثاني</li><li>احمرار، تورم، صديد ← <strong>راجع الطبيب!</strong></li></ul>',
-    tr:'<ul><li>Pansumanı 2 günde bir değiştirin</li><li>İlk 3–4 günde günde 4–5 kez 10–15 dk soğutun</li><li>İyileşene dek yarayı kuru tutun</li><li>2. günden itibaren duş</li><li>Kızarıklık, şişlik, irin → <strong>doktora!</strong></li></ul>'
+    de:'<ul><li>Wundverband spätestens alle 2 Tage wechseln oder nach Anweisung</li><li>In den ersten 3–4 Tagen die Wunde 4–5×/Tag jeweils 10–15 Minuten kühlen</li><li>Kein Vollbad bis zur vollständigen Wundheilung (in der Regel etwa 2 Wochen); Schwimmen erst ab etwa 4 Wochen und bei vollständig verheilter Wunde</li><li>Duschen ab 48 Stunden erlaubt (kurz, Wunde nicht direkt nass machen)</li><li>Rötung, Schwellung, Eiter → <strong>Arzt aufsuchen!</strong></li></ul>',
+    en:'<ul><li>Change dressing every 2 days or as instructed</li><li>First 3–4 days: cool wound 4–5×/day for 10–15 min</li><li>No baths until the wound has healed completely (usually about 2 weeks); swimming only from about 4 weeks and with a fully healed wound</li><li>Showering after 48 hours (briefly)</li><li>Redness, swelling, pus → <strong>see your doctor!</strong></li></ul>',
+    ar:'<ul><li>غيّر الضمادة كل يومين</li><li>أول 3–4 أيام: تبريد 4–5 مرات/يوم لـ10–15 دقيقة</li><li>تجنّب غمر الجسم في حوض الاستحمام حتى التئام الجرح تمامًا (عادةً نحو أسبوعين)؛ السباحة بدءًا من نحو أربعة أسابيع وبعد الالتئام التام</li><li>الاستحمام بعد ٤٨ ساعة</li><li>احمرار، تورم، صديد ← <strong>راجع الطبيب!</strong></li></ul>',
+    tr:'<ul><li>Pansumanı 2 günde bir değiştirin</li><li>İlk 3–4 günde günde 4–5 kez 10–15 dk soğutun</li><li>Yara tamamen iyileşene kadar küvet banyosu yapmayın (genellikle yaklaşık 2 hafta); yalnızca yaklaşık 4. haftadan itibaren ve yara tamamen iyileştiğinde yüzün</li><li>48 saat sonra duş</li><li>Kızarıklık, şişlik, irin → <strong>doktora!</strong></li></ul>'
   }},
 
 { id:'n06', cat:'nachbehandlung',
@@ -138,29 +138,29 @@ const FAQ_PART2 = [
 { id:'n08', cat:'nachbehandlung',
   q:{ de:'Wann kann ich wieder arbeiten?', en:'When can I return to work?', ar:'متى أعود للعمل؟', tr:'Ne zaman işe dönerim?' },
   a:{
-    de:'<ul><li>Bürotätigkeit: nach ca. 1–2 Wochen</li><li>Leichte körperliche Arbeit: nach 2–4 Wochen</li><li>Schwere körperliche Arbeit: nach 4–6 Wochen, manchmal länger</li></ul>',
-    en:'<ul><li>Office work: ~1–2 weeks</li><li>Light physical: 2–4 weeks</li><li>Heavy physical: 4–6 weeks, sometimes more</li></ul>',
-    ar:'<ul><li>عمل مكتبي: 1–2 أسبوع</li><li>جسدي خفيف: 2–4 أسابيع</li><li>جسدي ثقيل: 4–6 أسابيع</li></ul>',
-    tr:'<ul><li>Ofis: ~1–2 hafta</li><li>Hafif fiziksel: 2–4 hafta</li><li>Ağır fiziksel: 4–6 hafta</li></ul>'
-  }},
+    "de": "<ul><li>Büroarbeit: ca. 1–2 Wochen</li><li>Mittelschwere Arbeit: ca. 2–4 Wochen</li><li>Schwerarbeit: ca. 4–8 Wochen</li></ul><p>Individuell – immer nach Absprache mit dem Chirurgen und Hausarzt.</p>",
+    "en": "<ul><li>Office work: ~1–2 weeks</li><li>Moderate work: ~2–4 weeks</li><li>Heavy work: ~4–8 weeks</li></ul><p>Individual — always discuss with surgeon and GP.</p>",
+    "ar": "<ul><li>عمل مكتبي: 1–2 أسبوع</li><li>متوسط: 2–4 أسابيع</li><li>ثقيل: 4–8 أسابيع</li></ul><p>فردي — بالتنسيق مع الجراح وطبيب الأسرة.</p>",
+    "tr": "<ul><li>Ofis: ~1–2 hafta</li><li>Orta: ~2–4 hafta</li><li>Ağır: ~4–8 hafta</li></ul><p>Bireysel — cerrah ve aile hekimiyle.</p>"
+}},
 
 { id:'n09', cat:'nachbehandlung',
   q:{ de:'Wann darf ich wieder Sport treiben?', en:'When can I exercise again?', ar:'متى أعود للرياضة؟', tr:'Ne zaman spor yapabilirim?' },
   a:{
-    de:'<ul><li>Spazierengehen: nach 3 Tagen</li><li>Leichter Sport (Schwimmen, Radfahren): nach 4 Wochen</li><li>Fitnessstudio, Kraftsport, Kampfsport: nach 6–8 Wochen, nach Rücksprache mit dem Chirurgen</li></ul>',
-    en:'<ul><li>Walking: after 3 days</li><li>Light sports (swimming, cycling): after 4 weeks</li><li>Gym, weights, martial arts: after 6–8 weeks (consult surgeon)</li></ul>',
-    ar:'<ul><li>المشي: بعد 3 أيام</li><li>رياضة خفيفة: بعد 4 أسابيع</li><li>صالة، أثقال، فنون قتالية: 6–8 أسابيع</li></ul>',
-    tr:'<ul><li>Yürüyüş: 3 gün sonra</li><li>Hafif spor: 4 hafta sonra</li><li>Salon, ağırlık, dövüş: 6–8 hafta sonra</li></ul>'
-  }},
+    "de": "<p>Steigern Sie Aktivitäten schrittweise und entsprechend Ihren Beschwerden.</p><ul><li>Ab etwa 4 Wochen: Laufen und Schwimmen gemäß Ihrem Nachbehandlungsplan; Schwimmen erst bei vollständig verheilter Wunde.</li><li>Ab etwa 4 Wochen: Radfahren und Fitness mit leichter Gewichtsbelastung, schrittweise Steigerung nach ärztlicher Freigabe.</li><li>Kraftsport mit hohen Gewichten und Kontaktsport: Zeitpunkt individuell mit Ihrem Operateur vereinbaren.</li></ul><p>Maßgeblich ist Ihr persönlicher Nachbehandlungsplan. Je nach Bruchgröße, Operationsverfahren und Heilungsverlauf können andere Vorgaben gelten.</p>",
+    "en": "<p>Increase activity gradually, guided by your symptoms.</p><ul><li>From about 4 weeks: running and swimming according to your aftercare plan; swim only once the wound has healed completely.</li><li>From about 4 weeks: cycling and fitness with light weights, increasing gradually with medical clearance.</li><li>Heavy strength training and contact sports: agree the timing individually with your surgeon.</li></ul><p>Your individual aftercare plan takes priority. Instructions can differ according to hernia size, surgical technique and healing.</p>",
+    "ar": "<p>زِد نشاطك تدريجيًا بحسب الأعراض.</p><ul><li>بدءًا من نحو أربعة أسابيع: الجري والسباحة بحسب خطة التعافي؛ لا تسبح حتى يلتئم الجرح تمامًا.</li><li>بدءًا من نحو أربعة أسابيع: ركوب الدراجة والتمارين بأوزان خفيفة، مع زيادة تدريجية بعد موافقة الطبيب.</li><li>الأثقال الثقيلة ورياضات الاحتكاك: يُحدَّد توقيت العودة إليها فرديًا مع الجرّاح.</li></ul><p>تُقدَّم تعليمات خطة التعافي الخاصة بك على هذه الإرشادات. قد تختلف التعليمات حسب حجم الفتق وطريقة العملية وسير الالتئام.</p>",
+    "tr": "<p>Aktiviteyi şikâyetlerinize göre kademeli artırın.</p><ul><li>Yaklaşık 4. haftadan itibaren: bakım planınıza göre koşu ve yüzme; yalnızca yara tamamen iyileştiğinde yüzün.</li><li>Yaklaşık 4. haftadan itibaren: bisiklet ve hafif ağırlıklarla egzersiz, hekim onayıyla kademeli artış.</li><li>Ağır kuvvet antrenmanı ve temas sporları: zamanı cerrahınızla bireysel olarak belirleyin.</li></ul><p>Kişisel ameliyat sonrası bakım planınız önceliklidir. Fıtığın büyüklüğü, ameliyat yöntemi ve iyileşme sürecine göre talimatlar değişebilir.</p>"
+}},
 
 { id:'n10', cat:'nachbehandlung',
   q:{ de:'Wie schwer darf ich heben nach der OP?', en:'How heavy may I lift?', ar:'كم وزن يمكنني رفعه؟', tr:'Ne kadar ağırlık kaldırabilirim?' },
   a:{
-    de:'<p>In den ersten 2 Wochen: maximal <strong>2–5 kg</strong>. In den Wochen 3–4 langsam steigern, aber nicht mehr als <strong>10 kg</strong>. Nach 6 Wochen bei unkompliziertem Verlauf wieder normales Heben möglich – immer mit Bauchspannung und richtiger Hebetechnik!</p>',
-    en:'<p>First 2 weeks: max <strong>2–5 kg</strong>. Weeks 3–4: gradually up to <strong>10 kg</strong>. After 6 weeks: normal lifting — always with abdominal bracing and proper technique!</p>',
-    ar:'<p>أول أسبوعين: <strong>2–5 كغ</strong>. الأسبوع 3–4: حتى <strong>10 كغ</strong>. بعد 6 أسابيع رفع عادي مع شد البطن.</p>',
-    tr:'<p>İlk 2 hafta: en fazla <strong>2–5 kg</strong>. 3–4. hafta: <strong>10 kg</strong>\'a kadar. 6 haftadan sonra normal — daima karın gerilimiyle!</p>'
-  }},
+    "de": "<ul><li>Erste 2 Wochen: leichte Belastungen, Heben und Tragen bis maximal <strong>5 kg</strong>.</li><li>Ab der 3. Woche: schrittweise Steigerung bis maximal <strong>10 kg</strong>.</li><li>Ab etwa 4 Wochen: zunehmend volle Belastbarkeit entsprechend Ihrem Heilungsverlauf und nach ärztlicher Freigabe; keine automatische Freigabe für jede Belastung.</li></ul><p>Maßgeblich ist Ihr persönlicher Nachbehandlungsplan. Je nach Bruchgröße, Operationsverfahren und Heilungsverlauf können andere Vorgaben gelten.</p>",
+    "en": "<ul><li>First 2 weeks: light activity, lifting and carrying no more than <strong>5 kg</strong>.</li><li>From week 3: gradual increase up to <strong>10 kg</strong>.</li><li>From about 4 weeks: progress towards full activity depending on healing and medical clearance; this is not automatic clearance for every load.</li></ul><p>Your individual aftercare plan takes priority. Instructions can differ according to hernia size, surgical technique and healing.</p>",
+    "ar": "<ul><li>أول أسبوعين: نشاط خفيف، ورفع وحمل حتى <strong>٥ كغ</strong> كحد أقصى.</li><li>من الأسبوع الثالث: زيادة تدريجية حتى <strong>١٠ كغ</strong> كحد أقصى.</li><li>من نحو أربعة أسابيع: العودة التدريجية لكامل النشاط بحسب الالتئام وموافقة الطبيب؛ ليست موافقة تلقائية على جميع الأحمال.</li></ul><p>تُقدَّم تعليمات خطة التعافي الخاصة بك على هذه الإرشادات. قد تختلف التعليمات حسب حجم الفتق وطريقة العملية وسير الالتئام.</p>",
+    "tr": "<ul><li>İlk 2 hafta: hafif aktivite; en fazla <strong>5 kg</strong> kaldırma ve taşıma.</li><li>3. haftadan itibaren: kademeli olarak en fazla <strong>10 kg</strong>.</li><li>Yaklaşık 4. haftadan itibaren: iyileşmeye ve hekim onayına göre tam aktiviteye kademeli dönüş; bu, her türlü yük için otomatik izin değildir.</li></ul><p>Kişisel ameliyat sonrası bakım planınız önceliklidir. Fıtığın büyüklüğü, ameliyat yöntemi ve iyileşme sürecine göre talimatlar değişebilir.</p>"
+}},
 
 { id:'n11', cat:'nachbehandlung',
   q:{ de:'Wann darf ich wieder Geschlechtsverkehr haben?', en:'When can I have sex again?', ar:'متى أعود للعلاقة؟', tr:'Cinsel ilişkiye ne zaman?' },
@@ -198,7 +198,7 @@ const FAQ_PART2 = [
     tr:'<p>Evet, yaygın; sinir tahrişine bağlı. Genellikle haftalar-aylar içinde geçer.</p>'
   }},
 
-{ id:'n15', cat:'nachbehandlung',
+{ id:'n15', cat:'warnzeichen',
   q:{ de:'Wann muss ich nach der OP dringend meinen Chirurg/Arzt kontaktieren?', en:'When to urgently contact the doctor?', ar:'متى أتواصل عاجلاً؟', tr:'Ne zaman acilen aramalıyım?' },
   a:{
     de:'<ul><li>Starker, zunehmender Schmerz</li><li>Hohes Fieber (&gt; 38,5 °C)</li><li>Wundöffnung, Eiter, starke Rötung oder Nachblutung</li><li>Mehrfache Übelkeit, Erbrechen, kein Stuhlgang</li><li>Beinschwellung mit Wadenschmerzen (Thrombose-Verdacht)</li><li>Schwierigkeiten beim Atmen</li></ul>',

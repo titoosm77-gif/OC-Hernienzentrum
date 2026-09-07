@@ -8,7 +8,7 @@
 
   // ===== State =====
   const state = {
-    lang: localStorage.getItem('hernie-lang') || 'de',
+    lang: (() => { try { const lang = localStorage.getItem('hernie-lang'); return ['de','en','ar','tr'].includes(lang) ? lang : 'de'; } catch { return 'de'; } })(),
     page: 'home',
     cat: 'all',
     faq: [...(window.FAQ_PART1 || []), ...(window.FAQ_PART2 || [])]
@@ -40,7 +40,7 @@
   function applyLang() {
     document.documentElement.lang = state.lang;
     document.documentElement.dir = (state.lang === 'ar') ? 'rtl' : 'ltr';
-    localStorage.setItem('hernie-lang', state.lang);
+    try { localStorage.setItem('hernie-lang', state.lang); } catch { /* Language switching also works without storage. */ }
 
     // Update text-content translations
     $$('[data-i18n]').forEach(el => {
@@ -60,6 +60,8 @@
       el.setAttribute('aria-label', t(el.getAttribute('data-i18n-aria')));
     });
 
+    $$('.search-results').forEach(el => { el.classList.remove('show'); el.innerHTML = ''; });
+
     // Update lang switch active
     $$('.lang-switch button').forEach(b => {
       b.classList.toggle('active', b.dataset.lang === state.lang);
@@ -72,7 +74,9 @@
   }
 
   // ===== Navigation =====
-  function showPage(pageId) {
+  function showPage(pageId, updateHistory = true) {
+    if (!document.getElementById('page-' + pageId)) pageId = 'home';
+    if (updateHistory && location.hash !== '#' + pageId) history.pushState(null, '', '#' + pageId);
     state.page = pageId;
     $$('.page').forEach(p => p.classList.toggle('active', p.id === 'page-' + pageId));
     $$('.nav-main a').forEach(a => a.classList.toggle('active', a.dataset.page === pageId));
@@ -158,13 +162,15 @@
       html += `<section class="faq-section" id="cat-${cat.id}">`;
       html += `<h3 class="faq-section-title">${cat[lang]}</h3>`;
       items.forEach(item => {
+        const content = window.OC_answerPresentation(item, lang);
+        const more = content.details ? `<details class="faq-more"><summary><span class="when-closed">${t('faq_more')}</span><span class="when-open">${t('faq_less')}</span></summary><div class="faq-more-content">${content.details}</div></details>` : '';
         html += `
           <div class="faq-item" id="faq-${item.id}">
             <button class="faq-q" type="button" aria-expanded="false">
               <span>${item.q[lang]}</span>
               <span class="faq-icon">+</span>
             </button>
-            <div class="faq-a"><div class="faq-a-inner">${item.a[lang]}</div></div>
+            <div class="faq-a"><div class="faq-a-inner"><div class="faq-short-label">${t('faq_short')}</div>${content.summary}${more}</div></div>
           </div>
         `;
       });
@@ -180,6 +186,7 @@
         // close all
         wrap.querySelectorAll('.faq-item').forEach(i => {
           i.classList.remove('open');
+          i.querySelectorAll('.faq-more').forEach(d => { d.open = false; });
           i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
         });
         if (!wasOpen) {
@@ -277,10 +284,10 @@
   }
 
   // ===== Search UI =====
-  function setupSearch() {
-    const input = $('#search-input');
-    const btn = $('#search-btn');
-    const results = $('#search-results');
+  function setupSearch(prefix = 'search') {
+    const input = $('#' + prefix + '-input');
+    const btn = $('#' + prefix + '-btn');
+    const results = $('#' + prefix + '-results');
     if (!input || !results) return;
 
     let debounce;
@@ -345,7 +352,7 @@
     });
 
     document.addEventListener('click', (e) => {
-      if (!e.target.closest('.searchbox') && !e.target.closest('#search-results')) {
+      if (!input.closest('.searchbox').contains(e.target)) {
         results.classList.remove('show');
       }
     });
@@ -365,11 +372,12 @@
       target.scrollIntoView({ behavior: 'smooth', block: 'center' });
       const btn = target.querySelector('.faq-q');
       if (btn && !target.classList.contains('open')) btn.click();
+      target.querySelectorAll('.faq-more').forEach(d => { d.open = true; });
       target.classList.add('highlight');
       setTimeout(() => target.classList.remove('highlight'), 2200);
     }, 200);
-    $('#search-results')?.classList.remove('show');
-    $('#search-input').value = '';
+    $$('.search-results').forEach(el => el.classList.remove('show'));
+    $$('.searchbox input').forEach(el => { el.value = ''; });
   }
 
   // ===== Init =====
@@ -502,8 +510,10 @@
     }
 
     setupSearch();
+    setupSearch('faq-search');
     applyLang();
-    showPage('home');
+    showPage(location.hash.slice(1) || 'home', false);
+    window.addEventListener('popstate', () => showPage(location.hash.slice(1) || 'home', false));
   });
 
 })();

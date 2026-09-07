@@ -62,8 +62,8 @@ window.OC_DOCS = {
 <p>Beim Heben und Tragen von Lasten bestehen aufgrund unterschiedlicher Bruchgrößen und Bruchlagen sowie der verschiedenen OP-Techniken individuelle Unterschiede, über die wir Sie persönlich nach Ihrer Operation informieren. In der Regel gilt bei uns:</p>
 <ul>
 <li>in den ersten 2 Wochen: leichte Belastungen – Heben und Tragen bis max. 5 kg</li>
-<li>nach 2 Wochen: Belastungssteigerung bis maximal 10 kg, Laufen und Schwimmen sind möglich</li>
-<li>nach ca. 4 Wochen: zunehmend volle Belastbarkeit ohne Einschränkung, Radfahren, Fitness mit leichter Gewichtsbelastung ist erlaubt</li>
+<li>nach 2 Wochen: Belastungssteigerung bis maximal 10 kg</li>
+<li>nach ca. 4 Wochen: zunehmend volle Belastbarkeit ohne Einschränkung, Laufen, Schwimmen (erst bei vollständig verheilter Wunde), Radfahren, Fitness mit leichter Gewichtsbelastung ist erlaubt</li>
 </ul>`
   }
 };

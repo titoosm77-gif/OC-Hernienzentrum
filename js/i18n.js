@@ -97,7 +97,7 @@ const I18N = {
     about_text_1: 'Als zertifizierter Hernienoperateur und Mitglied der Deutschen Herniengesellschaft (DHG) habe ich mich auf die operative Behandlung sämtlicher Hernienformen spezialisiert. In unserem zertifizierten Hernienzentrum verbinden wir modernste minimal-invasive Operationstechniken mit individueller Patientenversorgung.',
     about_text_2: 'Schwerpunkte meiner Tätigkeit liegen in der laparo/endoskopischen Hernienchirurgie (TEP, TAPP, eTEP, E-MILOS, Lap IPOM), in der Versorgung komplexer Narben- und Rezidivhernien sowie in nervenerhaltenden Operationstechniken zur Vermeidung chronischer Schmerzen.',
     cred_dhg: 'Zertifizierter Hernienoperateur (DHG)',
-    cred_doc: 'Facharzt für Chirurgie',
+    cred_doc: 'Facharzt für Allgemein- und Viszeralchirurgie',
     cred_member: 'Mitglied der Deutschen Herniengesellschaft',
     cred_quality: 'Teilnahme an Herniamed-Qualitätssicherung',
 
@@ -342,7 +342,7 @@ const I18N = {
     about_text_1: 'As a certified hernia surgeon and member of the German Hernia Society (DHG), I specialise in the surgical treatment of all forms of hernias. At our certified hernia center we combine state-of-the-art minimally invasive operative techniques with individual patient care.',
     about_text_2: 'My main focus areas are laparo/endoscopic hernia surgery (TEP, TAPP, eTEP, E-MILOS, Lap IPOM), the treatment of complex incisional and recurrent hernias, and nerve-sparing techniques to avoid chronic pain.',
     cred_dhg: 'Certified Hernia Surgeon (DHG)',
-    cred_doc: 'Specialist for Surgery',
+    cred_doc: 'Specialist for General and Visceral Surgery',
     cred_member: 'Member of the German Hernia Society',
     cred_quality: 'Herniamed quality assurance',
 
@@ -586,7 +586,7 @@ const I18N = {
     about_text_1: 'بصفتي جراح فتق معتمد وعضو في الجمعية الألمانية للفتق (DHG)، تخصصت في العلاج الجراحي لجميع أشكال الفتق. في مركزنا المعتمد نجمع بين أحدث تقنيات الجراحة المنظارية والرعاية الفردية.',
     about_text_2: 'تشمل مجالات تركيزي جراحة الفتق بالمنظار (TEP، TAPP، eTEP، E-MILOS، Lap IPOM)، وعلاج الفتوق الندبية والمتكررة المعقدة، وتقنيات حافظة للأعصاب لتجنب الألم المزمن.',
     cred_dhg: 'جراح فتق معتمد (DHG)',
-    cred_doc: 'أخصائي جراحة',
+    cred_doc: 'أخصائي الجراحة العامة وجراحة الأحشاء',
     cred_member: 'عضو في الجمعية الألمانية للفتق',
     cred_quality: 'مشاركة في ضمان جودة Herniamed',
 
@@ -825,7 +825,7 @@ const I18N = {
     about_text_1: 'Sertifikalı fıtık cerrahı ve Alman Fıtık Derneği (DHG) üyesi olarak tüm fıtık türlerinin cerrahi tedavisinde uzmanlaştım. Sertifikalı merkezimizde modern minimal invaziv tekniklerle bireysel hasta bakımını birleştiriyoruz.',
     about_text_2: 'Odak alanlarım laparoskopik/endoskopik fıtık cerrahisi (TEP, TAPP, eTEP, E-MILOS, Lap IPOM), karmaşık insizyonel/nüks fıtıkların tedavisi ve kronik ağrıyı önlemek için sinir koruyucu tekniklerdir.',
     cred_dhg: 'Sertifikalı Fıtık Cerrahı (DHG)',
-    cred_doc: 'Cerrahi Uzmanı',
+    cred_doc: 'Genel ve Visseral Cerrahi Uzmanı',
     cred_member: 'Alman Fıtık Derneği üyesi',
     cred_quality: 'Herniamed kalite güvencesi',
 
@@ -1174,3 +1174,44 @@ if (typeof window !== 'undefined') {
   window.SPECIAL_HERNIAS = SPECIAL_HERNIAS;
   window.SYNONYMS = SYNONYMS;
 }
+
+// Personal patient-information identity and FAQ contact controls.
+const PATIENT_UI = {
+  "de": {
+    "hero_eyebrow": "Patienteninformationen zur Hernienchirurgie",
+    "patient_author": "Dr. med. Tarek Osman",
+    "hero_sub": "Hier finden Sie Antworten auf Ihre Fragen vor und nach einer Hernienoperation.",
+    "faq_search_label": "Fragen durchsuchen",
+    "faq_contact_prompt": "Ihre Frage ist noch offen? Schreiben Sie uns bei nicht dringlichen Anliegen.",
+    "faq_email_note": "E-Mail ist nicht für akute Beschwerden oder Notfälle geeignet.",
+    "review_write": "Auf Google bewerten"
+  },
+  "en": {
+    "hero_eyebrow": "Patient information on hernia surgery",
+    "patient_author": "Dr. med. Tarek Osman",
+    "hero_sub": "Find answers to your questions before and after hernia surgery.",
+    "faq_search_label": "Search questions",
+    "faq_contact_prompt": "Still have a question? Email us for non-urgent enquiries.",
+    "faq_email_note": "Email is not suitable for acute symptoms or emergencies.",
+    "review_write": "Leave a Google review"
+  },
+  "ar": {
+    "hero_eyebrow": "معلومات للمرضى عن جراحة الفتق",
+    "patient_author": "د. طارق عثمان",
+    "hero_sub": "هنا تجد إجابات عن أسئلتك قبل عملية الفتق وبعدها.",
+    "faq_search_label": "ابحث في الأسئلة",
+    "faq_contact_prompt": "لم تجد جواب سؤالك؟ راسلنا للاستفسارات غير العاجلة.",
+    "faq_email_note": "البريد الإلكتروني غير مناسب للأعراض الحادة أو الحالات الطارئة.",
+    "review_write": "اكتب تقييمًا على Google"
+  },
+  "tr": {
+    "hero_eyebrow": "Fıtık cerrahisi hakkında hasta bilgileri",
+    "patient_author": "Dr. med. Tarek Osman",
+    "hero_sub": "Fıtık ameliyatı öncesi ve sonrası sorularınızın yanıtlarını burada bulabilirsiniz.",
+    "faq_search_label": "Sorularda ara",
+    "faq_contact_prompt": "Sorunuz yanıtlanmadı mı? Acil olmayan konularda bize e-posta yazabilirsiniz.",
+    "faq_email_note": "E-posta, akut şikâyetler veya acil durumlar için uygun değildir.",
+    "review_write": "Google yorumu yazın"
+  }
+};
+Object.entries(PATIENT_UI).forEach(([lang, labels]) => Object.assign(window.I18N[lang], labels));

@@ -4,13 +4,76 @@
    ========================================================= */
 
 const CATEGORIES = [
-  { id:'allgemein',      de:'Allgemeine Informationen',     en:'General Information',     ar:'معلومات عامة',                 tr:'Genel Bilgiler' },
-  { id:'operation',      de:'Fragen zur Operation',         en:'About the Surgery',       ar:'أسئلة حول العملية',            tr:'Ameliyat Hakkında' },
-  { id:'nachbehandlung', de:'Fragen zur Nachbehandlung',    en:'Aftercare',                ar:'الرعاية اللاحقة',              tr:'Ameliyat Sonrası Bakım' },
-  { id:'leistenhernie',  de:'Fragen zur Leistenhernie',     en:'Inguinal Hernia',          ar:'الفتق الأربي',                 tr:'Kasık Fıtığı' },
-  { id:'nabelhernie',    de:'Fragen zur Nabelhernie',       en:'Umbilical Hernia',         ar:'الفتق السري',                  tr:'Göbek Fıtığı' },
-  { id:'narbenhernie',   de:'Fragen zur Narbenhernie',      en:'Incisional Hernia',        ar:'الفتق الندبي',                 tr:'İnsizyonel Fıtık' },
-  { id:'risiko',         de:'Risikofaktoren & Vorbeugung',  en:'Risk Factors & Prevention',ar:'عوامل الخطر والوقاية',         tr:'Risk Faktörleri ve Önleme' }
+  {
+    "id": "allgemein",
+    "de": "Hernie verstehen",
+    "en": "Understanding hernias",
+    "ar": "فهم الفتق",
+    "tr": "Fıtığı anlamak"
+  },
+  {
+    "id": "entscheidung",
+    "de": "Entscheidung zur Operation",
+    "en": "Deciding on surgery",
+    "ar": "اتخاذ قرار العملية",
+    "tr": "Ameliyat kararı"
+  },
+  {
+    "id": "vorbereitung",
+    "de": "Vor der Operation",
+    "en": "Before surgery",
+    "ar": "قبل العملية",
+    "tr": "Ameliyat öncesi"
+  },
+  {
+    "id": "operation",
+    "de": "Am Operationstag",
+    "en": "On the day of surgery",
+    "ar": "يوم العملية",
+    "tr": "Ameliyat günü"
+  },
+  {
+    "id": "nachbehandlung",
+    "de": "Nach der Operation",
+    "en": "After surgery",
+    "ar": "بعد العملية",
+    "tr": "Ameliyat sonrası"
+  },
+  {
+    "id": "warnzeichen",
+    "de": "Warnzeichen & Hilfe",
+    "en": "Warning signs & help",
+    "ar": "علامات الخطر والمساعدة",
+    "tr": "Uyarı işaretleri ve yardım"
+  },
+  {
+    "id": "leistenhernie",
+    "de": "Leistenhernie",
+    "en": "Inguinal hernia",
+    "ar": "الفتق الأربي",
+    "tr": "Kasık fıtığı"
+  },
+  {
+    "id": "nabelhernie",
+    "de": "Nabelhernie",
+    "en": "Umbilical hernia",
+    "ar": "الفتق السري",
+    "tr": "Göbek fıtığı"
+  },
+  {
+    "id": "narbenhernie",
+    "de": "Narbenhernie",
+    "en": "Incisional hernia",
+    "ar": "الفتق الندبي",
+    "tr": "İnsizyonel fıtık"
+  },
+  {
+    "id": "risiko",
+    "de": "Risikofaktoren & Vorbeugung",
+    "en": "Risk factors & prevention",
+    "ar": "عوامل الخطر والوقاية",
+    "tr": "Risk faktörleri ve korunma"
+  }
 ];
 
 const FAQ = [
@@ -98,7 +161,7 @@ const FAQ = [
     tr:'<p>Bebeklerde (göbek fıtığı) defekt genellikle 2 yaşına kadar kendiliğinden kapanır. Yetişkinlerde fıtık kendiliğinden geçmez, çoğunlukla büyür.</p>'
   }},
 
-{ id:'a10', cat:'allgemein',
+{ id:'a10', cat:'warnzeichen',
   q:{ de:'Ist eine Hernie lebensbedrohlich?', en:'Is a hernia life-threatening?', ar:'هل الفتق يهدد الحياة؟', tr:'Fıtık hayati tehlike taşır mı?' },
   a:{
     de:'<p>In der Regel nicht sofort. Jedoch kann eine eingeklemmte Hernie (<strong>Inkarzeration</strong>) lebensbedrohlich werden, wenn die Blutversorgung des eingeklemmten Darms unterbrochen wird (<strong>Strangulation</strong>). Dies ist ein chirurgischer Notfall!</p>',
@@ -107,7 +170,7 @@ const FAQ = [
     tr:'<p>Genellikle anında değil. Ancak boğulmuş fıtıkta sıkışan bağırsağın kan akımı kesilirse (<strong>strangülasyon</strong>) hayati tehlike doğar. Bu cerrahi bir acildir!</p>'
   }},
 
-{ id:'a11', cat:'allgemein',
+{ id:'a11', cat:'warnzeichen',
   q:{ de:'Was bedeutet „eingeklemmte" oder „inkarzerierte" Hernie?', en:'What is an incarcerated hernia?', ar:'ما هو الفتق المنحبس؟', tr:'Boğulmuş fıtık nedir?' },
   a:{
     de:'<p>Wenn sich der Bruchinhalt nicht mehr zurückdrücken lässt und die Blutversorgung unterbrochen wird, spricht man von einer eingeklemmten Hernie. Zeichen: <strong>plötzlicher starker Schmerz</strong>, harte nicht reponierbare Vorwölbung, Übelkeit, Erbrechen. → <strong>Sofort Notaufnahme!</strong></p>',
@@ -116,7 +179,7 @@ const FAQ = [
     tr:'<p>Fıtık içeriği geri itilemiyor ve kan akımı kesildiyse. Belirtiler: <strong>ani şiddetli ağrı</strong>, sert geri itilemez şişlik, bulantı, kusma. → <strong>Derhal acile!</strong></p>'
   }},
 
-{ id:'a12', cat:'allgemein',
+{ id:'a12', cat:'entscheidung',
   q:{ de:'Muss eine Hernie immer operiert werden?', en:'Does a hernia always need surgery?', ar:'هل يجب دائماً إجراء عملية للفتق؟', tr:'Fıtık her zaman ameliyat edilmeli mi?' },
   a:{
     de:'<p>Nicht zwingend sofort, aber grundsätzlich ja. Eine asymptomatische kleine Leistenhernie kann beobachtet werden. <strong>Nabel-, Narbenhernien und symptomatische Hernien</strong> sollten operiert werden, da das Risiko einer Einklemmung besteht.</p>',
@@ -125,7 +188,7 @@ const FAQ = [
     tr:'<p>Her zaman hemen değil ama genel olarak evet. Belirtisiz küçük kasık fıtığı izlenebilir. <strong>Göbek, insizyonel ve belirti veren fıtıklar</strong> boğulma riski nedeniyle ameliyat edilmelidir.</p>'
   }},
 
-{ id:'a13', cat:'allgemein',
+{ id:'a13', cat:'entscheidung',
   q:{ de:'Was passiert, wenn ich die Operation hinausschiebe?', en:'What if I delay the surgery?', ar:'ماذا يحدث إذا أجلت العملية؟', tr:'Ameliyatı ertelersem ne olur?' },
   a:{
     de:'<p>Die Hernie wird in der Regel größer, die Beschwerden nehmen zu und das Risiko einer Einklemmung steigt. Außerdem wird die Operation technisch schwieriger, je größer die Hernie ist.</p>',
@@ -134,7 +197,7 @@ const FAQ = [
     tr:'<p>Fıtık genellikle büyür, şikayetler artar ve boğulma riski yükselir. Ameliyat teknik olarak da zorlaşır.</p>'
   }},
 
-{ id:'a14', cat:'allgemein',
+{ id:'a14', cat:'vorbereitung',
   q:{ de:'Bin ich fit genug für eine Hernienoperation?', en:'Am I fit enough for hernia surgery?', ar:'هل أنا لائق للعملية؟', tr:'Ameliyat için yeterince sağlıklı mıyım?' },
   a:{
     de:'<p>Für die meisten Patienten ist eine Hernienoperation sicher. Der Chirurg und der Anästhesist beurteilen vorab Ihre Gesundheit, Vorerkrankungen und Medikamente, um das Risiko zu minimieren.</p>',
@@ -143,7 +206,7 @@ const FAQ = [
     tr:'<p>Fıtık ameliyatı çoğu hasta için güvenlidir. Cerrah ve anestezi uzmanı sağlığınızı, hastalıklarınızı ve ilaçlarınızı önceden değerlendirir.</p>'
   }},
 
-{ id:'a15', cat:'allgemein',
+{ id:'a15', cat:'vorbereitung',
   q:{ de:'Welche Voruntersuchungen sind notwendig?', en:'Which preoperative tests are needed?', ar:'ما الفحوصات اللازمة قبل العملية؟', tr:'Ameliyat öncesi hangi tetkikler gerekir?' },
   a:{
     de:'<p>Je nach Alter und Allgemeinzustand: kleines Blutbild, Gerinnung (Quick/INR), EKG, Lungenfunktion, ggf. Herzecho, Anästhesievorgespräch.</p>',
@@ -152,7 +215,7 @@ const FAQ = [
     tr:'<p>Yaşa ve duruma göre: tam kan sayımı, pıhtılaşma, EKG, akciğer fonksiyonu, gerekirse ekokardiyografi, anestezi muayenesi.</p>'
   }},
 
-{ id:'a16', cat:'allgemein',
+{ id:'a16', cat:'vorbereitung',
   q:{ de:'Wo finden die Voruntersuchungen statt?', en:'Where are preoperative tests performed?', ar:'أين تُجرى الفحوصات قبل العملية؟', tr:'Ameliyat öncesi tetkikler nerede yapılır?' },
   a:{
     de:'<p>Voruntersuchungen übernimmt bei <strong>ambulanten Eingriffen der Hausarzt</strong>, bei <strong>stationären das Krankenhaus</strong>.</p>',
@@ -161,7 +224,7 @@ const FAQ = [
     tr:'<p><strong>Ayakta tedavi</strong> için aile hekimi; <strong>yatarak tedavi</strong> için hastane.</p>'
   }},
 
-{ id:'a17', cat:'allgemein',
+{ id:'a17', cat:'vorbereitung',
   q:{ de:'Welche Medikamente muss ich vor der OP absetzen?', en:'Which medications should I stop before surgery?', ar:'أي أدوية يجب إيقافها قبل العملية؟', tr:'Ameliyat öncesi hangi ilaçları kesmeliyim?' },
   a:{
     de:'<p><strong>Blutverdünner:</strong></p><ul><li>Marcumar und Brilique: 7 Tage vor der OP (Überbrückung mit Bauchspritze)</li><li>Xarelto, Eliquis, Pradaxa, Lixiana: 24 Stunden vor der OP</li><li>Clopidogrel: 5 Tage vor der OP</li></ul><p><strong>Diabetes-Medikamente:</strong> Metformin 2 Tage vor OP nach Rücksprache mit dem Narkosearzt absetzen.</p><p><strong>Bestimmte Blutdruckmittel oder Entzündungshemmer:</strong> Sprechen Sie IMMER mit Ihrem Arzt – niemals eigenständig absetzen!</p>',
@@ -170,7 +233,7 @@ const FAQ = [
     tr:'<p><strong>Kan sulandırıcılar:</strong></p><ul><li>Marcumar / Brilique: 7 gün önce (heparin köprüleme)</li><li>Xarelto, Eliquis, Pradaxa, Lixiana: 24 saat önce</li><li>Clopidogrel: 5 gün önce</li></ul><p><strong>Diyabet:</strong> Metformin anestezi uzmanına danışılarak 2 gün önce kesilir.</p><p><strong>Bazı tansiyon/iltihap ilaçları:</strong> Mutlaka doktorunuzla konuşun — kendiniz kesmeyin!</p>'
   }},
 
-{ id:'a18', cat:'allgemein',
+{ id:'a18', cat:'vorbereitung',
   q:{ de:'Darf ich vor der Operation essen und trinken?', en:'Can I eat or drink before surgery?', ar:'هل يمكنني الأكل أو الشرب قبل العملية؟', tr:'Ameliyat öncesi yiyip içebilir miyim?' },
   a:{
     de:'<p>In der Regel: <strong>6 Stunden nüchtern</strong> für feste Speisen — das gilt auch für Kaugummi, Bonbons und Rauchen. <strong>Klare Flüssigkeit</strong> darf bis 2 Stunden vor dem geplanten Eingriff getrunken werden.</p>',
@@ -179,7 +242,7 @@ const FAQ = [
     tr:'<p>Genellikle: <strong>katı gıdalardan 6 saat</strong> aç — sakız, şekerleme, sigara dahil. <strong>Berrak sıvılar</strong> 2 saat öncesine kadar.</p>'
   }},
 
-{ id:'a19', cat:'allgemein',
+{ id:'a19', cat:'operation',
   q:{ de:'Welches Narkoseverfahren wird angewendet?', en:'Which anaesthesia method is used?', ar:'ما نوع التخدير المستخدم؟', tr:'Hangi anestezi yöntemi kullanılır?' },
   a:{
     de:'<ul><li><strong>Vollnarkose:</strong> Am häufigsten bei laparoskopischen (Schlüsselloch-) Eingriffen.</li><li><strong>Regionalanästhesie (Spinalanästhesie):</strong> Möglich bei offenen Eingriffen.</li><li><strong>Lokalanästhesie:</strong> Bei kleinen, unkomplizierten Leistenhernien möglich, ebenso bei älteren Patienten mit eingeschränkter Narkosefähigkeit.</li></ul>',
@@ -188,7 +251,7 @@ const FAQ = [
     tr:'<ul><li><strong>Genel anestezi:</strong> Laparoskopik ameliyatlarda en sık.</li><li><strong>Bölgesel (spinal):</strong> Açık ameliyatlarda mümkün.</li><li><strong>Lokal anestezi:</strong> Küçük komplikasyonsuz kasık fıtıkları ve yaşlı hastalarda mümkün.</li></ul>'
   }},
 
-{ id:'a20', cat:'allgemein',
+{ id:'a20', cat:'entscheidung',
   q:{ de:'Welche OP-Methoden gibt es?', en:'What surgical methods are available?', ar:'ما طرق العملية المتاحة؟', tr:'Hangi ameliyat yöntemleri vardır?' },
   a:{
     de:'<ul><li><strong>Offen (konventionell):</strong> Schnitt über der Hernie, direkte Reparatur mit oder ohne Netz.</li><li><strong>Laparoskopisch / endoskopisch (Schlüsselloch):</strong> 3 kleine Schnitte, Kamera, minimal-invasiv, mit Netzversorgung.</li></ul>',
@@ -197,7 +260,7 @@ const FAQ = [
     tr:'<ul><li><strong>Açık (klasik):</strong> Fıtık üzerinden kesi, yamalı/yamasız onarım.</li><li><strong>Laparoskopik (kapalı):</strong> 3 küçük kesi, kamera, minimal invaziv, yama ile.</li></ul>'
   }},
 
-{ id:'a21', cat:'allgemein',
+{ id:'a21', cat:'entscheidung',
   q:{ de:'Was ist der Unterschied zwischen offener und laparoskopischer OP?', en:'Difference between open and laparoscopic surgery?', ar:'ما الفرق بين الجراحة المفتوحة والمنظارية؟', tr:'Açık ve laparoskopik ameliyat farkı nedir?' },
   a:{
     de:'<p><strong>Offene Operation:</strong> 1 großer Schnitt, kann in Lokal-, Regional- oder Vollnarkose durchgeführt werden, mehr postoperativer Schmerz, Erholung ist länger, Rückfallrisiko vergleichbar. Beidseitige Hernien werden über zwei Schnitte versorgt.</p><p><strong>Laparoskopisch:</strong> 3 kleine Schnitte (0,5–2 cm), nur in Vollnarkose, weniger Schmerz, kürzere Erholung, vergleichbares Rückfallrisiko. Beidseitige Hernien werden über dieselben Zugänge versorgt.</p>',
@@ -206,7 +269,7 @@ const FAQ = [
     tr:'<p><strong>Açık:</strong> 1 büyük kesi; lokal/bölgesel/genel anestezi; daha fazla ağrı; daha uzun iyileşme; benzer nüks. İki taraflı = iki kesi.</p><p><strong>Laparoskopik:</strong> 3 küçük kesi (0,5–2 cm); sadece genel anestezi; daha az ağrı; daha kısa iyileşme; benzer nüks. İki taraflı aynı portlardan.</p>'
   }},
 
-{ id:'a22', cat:'allgemein',
+{ id:'a22', cat:'entscheidung',
   q:{ de:'Welche Methode ist für mich die richtige?', en:'Which method is right for me?', ar:'أي طريقة هي المناسبة لي؟', tr:'Benim için hangi yöntem doğru?' },
   a:{
     de:'<p>Das hängt ab von: Größe und Lage der Hernie, Voroperationen, Allgemeinzustand und Erfahrung des Chirurgen. Es gibt keine universell „beste" Methode.</p>',
@@ -215,7 +278,7 @@ const FAQ = [
     tr:'<p>Şunlara bağlıdır: fıtığın büyüklüğü ve yeri, geçirilmiş ameliyatlar, genel durum, cerrah deneyimi. Evrensel "en iyi" yöntem yoktur.</p>'
   }},
 
-{ id:'a23', cat:'allgemein',
+{ id:'a23', cat:'entscheidung',
   q:{ de:'Was ist ein Herniennetz und wozu dient es?', en:'What is a hernia mesh?', ar:'ما هي شبكة الفتق؟', tr:'Fıtık yaması nedir?' },
   a:{
     de:'<p>Ein Herniennetz (Mesh) ist ein synthetisches oder biologisches Geflecht, das zur Verstärkung der Bauchwand eingesetzt wird. Es <strong>reduziert das Rückfallrisiko</strong> erheblich und ist heute Standard.</p>',
@@ -224,7 +287,7 @@ const FAQ = [
     tr:'<p>Fıtık yaması, karın duvarını güçlendiren sentetik veya biyolojik bir örgüdür. <strong>Nüksü belirgin azaltır</strong> ve günümüzde standarttır.</p>'
   }},
 
-{ id:'a24', cat:'allgemein',
+{ id:'a24', cat:'entscheidung',
   q:{ de:'Ist ein Netz sicher? Kann es Probleme machen?', en:'Is mesh safe?', ar:'هل الشبكة آمنة؟', tr:'Yama güvenli mi?' },
   a:{
     de:'<p>Moderne Netze sind sehr gut verträglich. Selten kann es zu Netzinfektionen, Netzschrumpfung, chronischen Schmerzen oder Netzmigrationen kommen. Insgesamt überwiegen die Vorteile (geringere Rezidivrate) die Risiken deutlich.</p>',
@@ -233,7 +296,7 @@ const FAQ = [
     tr:'<p>Modern yamalar çok iyi tolere edilir. Enfeksiyon, büzülme, kronik ağrı veya göç nadirdir. Yararlar (düşük nüks) riskleri belirgin şekilde geçer.</p>'
   }},
 
-{ id:'a25', cat:'allgemein',
+{ id:'a25', cat:'entscheidung',
   q:{ de:'Gibt es auch eine Reparatur ohne Netz?', en:'Is there a mesh-free repair?', ar:'هل توجد إصلاحات بدون شبكة؟', tr:'Yamasız onarım var mı?' },
   a:{
     de:'<p>Ja – die <strong>Shouldice-Methode</strong> (bei Leistenhernien) oder andere Nahtverfahren. Sie sind geeignet für junge, sportliche Patienten mit kleiner Hernie und guter Gewebequalität. Das Rückfallrisiko ist etwas höher. Nabelhernien mit Bruchlücke bis 1,5 cm können ohne Netz behandelt werden. Narbenhernien hingegen sollten <strong>unabhängig von der Größe immer mit Netz</strong> versorgt werden.</p>',
@@ -242,7 +305,7 @@ const FAQ = [
     tr:'<p>Evet — kasık fıtığı için <strong>Shouldice</strong> ve diğer dikiş onarımları. Genç-sportif, küçük fıtıklı ve iyi dokulu hastalar için uygun. 1,5 cm\'e kadar göbek fıtığı yamasız olabilir. İnsizyonel fıtıklar <strong>boyutuna bakmaksızın daima yama ile</strong>.</p>'
   }},
 
-{ id:'a26', cat:'allgemein',
+{ id:'a26', cat:'entscheidung',
   q:{ de:'Werde ich stationär oder ambulant operiert?', en:'Inpatient or outpatient surgery?', ar:'هل ستكون العملية يومية أم مع إقامة؟', tr:'Yatarak mı ayakta mı?' },
   a:{
     de:'<p>Viele unkomplizierte Hernienoperationen werden heute <strong>ambulant (tagesklinisch)</strong> durchgeführt. Bei bestimmten medizinischen oder sozialen Gründen ist ein <strong>stationärer Aufenthalt (1 Tag)</strong> üblich.</p>',
@@ -251,7 +314,7 @@ const FAQ = [
     tr:'<p>Komplikasyonsuz ameliyatların çoğu <strong>günübirlik</strong>. Belirli nedenlerle <strong>1 günlük yatış</strong> olabilir.</p>'
   }},
 
-{ id:'a27', cat:'allgemein',
+{ id:'a27', cat:'operation',
   q:{ de:'An welchem Ort wird die ambulante Operation durchgeführt?', en:'Where are outpatient operations performed?', ar:'أين تُجرى العمليات النهارية؟', tr:'Ayakta ameliyatlar nerede yapılır?' },
   a:{
     de:'<p>Die ambulante Operation erfolgt entweder in der <strong>Apollonia Klinik Ludwigshafen</strong> oder in der <strong>GRN Klinik Schwetzingen</strong>.</p>',
@@ -260,7 +323,7 @@ const FAQ = [
     tr:'<p><strong>Apollonia Klinik Ludwigshafen</strong> veya <strong>GRN Klinik Schwetzingen</strong>\'de yapılır.</p>'
   }},
 
-{ id:'a28', cat:'allgemein',
+{ id:'a28', cat:'vorbereitung',
   q:{ de:'Muss ich mich vor der ambulanten Operation beim Narkosearzt melden?', en:'Do I need to see the anaesthetist before outpatient surgery?', ar:'هل أراجع طبيب التخدير قبل العملية النهارية؟', tr:'Ayakta ameliyat öncesi anestezi uzmanına gitmem gerekir mi?' },
   a:{
     de:'<p>Ja. Vereinbaren Sie rechtzeitig einen Termin bei <strong>Apollonia – telefonisch unter 0621 5299247</strong> oder online auf <a href="https://apollonia-kurpfalzklinik.de/" target="_blank" rel="noopener">apollonia-kurpfalzklinik.de</a>. Für die GRN Klinik Schwetzingen wählen Sie <strong>06202 8465230</strong>.</p>',
@@ -269,7 +332,7 @@ const FAQ = [
     tr:'<p>Evet. Zamanında randevu alın: <strong>Apollonia: 0621 5299247</strong> veya <a href="https://apollonia-kurpfalzklinik.de/" target="_blank" rel="noopener">apollonia-kurpfalzklinik.de</a>. GRN Schwetzingen: <strong>06202 8465230</strong>.</p>'
   }},
 
-{ id:'a29', cat:'allgemein',
+{ id:'a29', cat:'operation',
   q:{ de:'An welchem Ort wird die stationäre Operation durchgeführt?', en:'Where are inpatient operations performed?', ar:'أين العمليات الداخلية؟', tr:'Yatarak ameliyatlar nerede?' },
   a:{
     de:'<p>Die stationäre Operation findet <strong>NUR in der GRN Klinik Schwetzingen</strong> statt.</p>',
@@ -278,7 +341,7 @@ const FAQ = [
     tr:'<p><strong>SADECE GRN Klinik Schwetzingen</strong>\'de.</p>'
   }},
 
-{ id:'a30', cat:'allgemein',
+{ id:'a30', cat:'vorbereitung',
   q:{ de:'Muss ich mich vor der stationären Operation beim Narkosearzt melden?', en:'Anaesthetist appointment before inpatient surgery?', ar:'موعد تخدير قبل العملية الداخلية؟', tr:'Yatarak ameliyat öncesi anestezi randevusu?' },
   a:{
     de:'<p>Ja. Vereinbaren Sie rechtzeitig einen Termin beim Narkosearzt in der <strong>GRN Klinik Schwetzingen unter 06202 8465230</strong>.</p>',
@@ -287,7 +350,7 @@ const FAQ = [
     tr:'<p>Evet. <strong>GRN Klinik Schwetzingen: 06202 8465230</strong>\'dan randevu alın.</p>'
   }},
 
-{ id:'a31', cat:'allgemein',
+{ id:'a31', cat:'operation',
   q:{ de:'Wie lange dauert die Operation?', en:'How long does the operation take?', ar:'كم تستغرق العملية؟', tr:'Ameliyat ne kadar sürer?' },
   a:{
     de:'<ul><li>Einfache Leistenhernie: ca. 30–60 Minuten</li><li>Nabelhernie: ca. 15–45 Minuten</li><li>Narbenhernie (je nach Größe): 60–180 Minuten</li><li>Beidseitige Leistenhernien: ca. 50–90 Minuten</li></ul>',
@@ -296,7 +359,7 @@ const FAQ = [
     tr:'<ul><li>Basit kasık fıtığı: ~30–60 dk</li><li>Göbek fıtığı: ~15–45 dk</li><li>İnsizyonel fıtık: 60–180 dk</li><li>İki taraflı kasık: ~50–90 dk</li></ul>'
   }},
 
-{ id:'a32', cat:'allgemein',
+{ id:'a32', cat:'vorbereitung',
   q:{ de:'Muss ich meine Bauchhaare rasieren?', en:'Do I need to shave my abdomen?', ar:'هل أحلق شعر البطن؟', tr:'Karnımı tıraş etmeli miyim?' },
   a:{
     de:'<p>Das übernimmt in der Regel das OP-Team unmittelbar vor dem Eingriff. Sie müssen zu Hause nichts vorbereiten.</p>',
@@ -305,7 +368,7 @@ const FAQ = [
     tr:'<p>Bunu ameliyat ekibi hemen önce yapar. Evde hazırlık gerekmez.</p>'
   }},
 
-{ id:'a33', cat:'allgemein',
+{ id:'a33', cat:'vorbereitung',
   q:{ de:'Was soll ich am Operationstag mitbringen?', en:'What should I bring on surgery day?', ar:'ماذا أحضر في يوم العملية؟', tr:'Ameliyat günü ne getirmeliyim?' },
   a:{
     de:'<ul><li>Narkoseaufklärungsbogen (falls Videosprechstunde)</li><li>Medikamentenliste</li><li>Versichertenkarte</li><li>Bequeme, weite Kleidung</li><li>Bei ambulanter OP: <strong>Begleitperson</strong> organisieren</li><li>Schmuck und Bargeld zu Hause lassen</li></ul>',
@@ -314,7 +377,7 @@ const FAQ = [
     tr:'<ul><li>Anestezi onam formu</li><li>İlaç listesi</li><li>Sigorta kartı</li><li>Rahat, bol kıyafet</li><li>Ayakta: <strong>Refakatçi</strong></li><li>Mücevher/nakit evde kalsın</li></ul>'
   }},
 
-{ id:'a34', cat:'allgemein',
+{ id:'a34', cat:'vorbereitung',
   q:{ de:'Kann ich alleine zur OP kommen?', en:'Can I come alone?', ar:'هل أحضر وحدي؟', tr:'Yalnız gelebilir miyim?' },
   a:{
     de:'<p>Sie können alleine zur OP kommen, ABER Sie dürfen <strong>nicht alleine nach Hause gehen oder fahren</strong>. Sie benötigen eine Begleitperson, die Sie nach Hause bringt und in den ersten 24 Stunden bei Ihnen bleibt.</p>',
@@ -323,7 +386,7 @@ const FAQ = [
     tr:'<p>Yalnız gelebilirsiniz AMA <strong>yalnız dönemez veya araba kullanamazsınız</strong>. 24 saat yanınızda kalacak refakatçi gerekir.</p>'
   }},
 
-{ id:'a35', cat:'allgemein',
+{ id:'a35', cat:'nachbehandlung',
   q:{ de:'Brauche ich Physiotherapie nach der Hernienoperation?', en:'Do I need physiotherapy?', ar:'هل أحتاج علاجاً طبيعياً؟', tr:'Fizyoterapi gerekir mi?' },
   a:{
     de:'<p>Bei einfachen Hernien in der Regel nicht zwingend. Bei großen Narbenhernien, nach Komponentenseparation oder bei Rückenproblemen kann Physiotherapie sinnvoll sein.</p>',
@@ -332,7 +395,7 @@ const FAQ = [
     tr:'<p>Basit fıtıklar için zorunlu değildir. Büyük insizyonel fıtık veya bel sorunlarında faydalı olabilir.</p>'
   }},
 
-{ id:'a36', cat:'allgemein',
+{ id:'a36', cat:'risiko',
   q:{ de:'Muss ich mein Körpergewicht reduzieren?', en:'Do I need to lose weight?', ar:'هل أخفض وزني؟', tr:'Kilo vermeli miyim?' },
   a:{
     de:'<p>Übergewicht (BMI &gt; 30) erhöht das Rückfallrisiko erheblich. <strong>Gewichtsreduktion vor und nach der OP</strong> ist sehr empfehlenswert.</p>',
@@ -341,7 +404,7 @@ const FAQ = [
     tr:'<p>Obezite (VKİ &gt; 30) nüksü artırır. <strong>Ameliyat öncesi/sonrası kilo verme</strong> şiddetle önerilir.</p>'
   }},
 
-{ id:'a37', cat:'allgemein',
+{ id:'a37', cat:'risiko',
   q:{ de:'Soll ich meine Ernährung umstellen?', en:'Should I change my diet?', ar:'هل أغير نظامي الغذائي؟', tr:'Beslenmemi değiştirmeli miyim?' },
   a:{
     de:'<ul><li>Ballaststoffreiche Ernährung beugt Verstopfung vor (Pressen erhöht den Bauchdruck!)</li><li>Ausreichend trinken (mindestens 1,5–2 Liter/Tag)</li><li>Übergewicht durch gesunde Ernährung reduzieren</li></ul>',
@@ -350,7 +413,7 @@ const FAQ = [
     tr:'<ul><li>Lifli beslenme kabızlığı önler</li><li>Günde en az 1,5–2 L su</li><li>Sağlıklı beslenme ile kilo verin</li></ul>'
   }},
 
-{ id:'a38', cat:'allgemein',
+{ id:'a38', cat:'nachbehandlung',
   q:{ de:'Wie lange bin ich krankgeschrieben?', en:'How long on sick leave?', ar:'كم مدة الإجازة المرضية؟', tr:'Ne kadar raporlu olurum?' },
   a:{
     de:'<ul><li>Büroarbeit: ca. 1–2 Wochen</li><li>Mittelschwere Arbeit: ca. 2–4 Wochen</li><li>Schwerarbeit: ca. 4–8 Wochen</li></ul><p>Individuell – immer nach Absprache mit dem Chirurgen und Hausarzt.</p>',
@@ -359,16 +422,16 @@ const FAQ = [
     tr:'<ul><li>Ofis: ~1–2 hafta</li><li>Orta: ~2–4 hafta</li><li>Ağır: ~4–8 hafta</li></ul><p>Bireysel — cerrah ve aile hekimiyle.</p>'
   }},
 
-{ id:'a39', cat:'allgemein',
+{ id:'a39', cat:'nachbehandlung',
   q:{ de:'Wann ist die erste Nachsorgeuntersuchung?', en:'When is the first follow-up?', ar:'متى أول مراجعة؟', tr:'İlk kontrol ne zaman?' },
   a:{
-    de:'<p>Die Nachkontrollen finden üblicherweise <strong>am ersten Tag nach der Operation</strong>, nach <strong>einer Woche</strong>, nach <strong>drei Monaten</strong> sowie nach <strong>einem, fünf und zehn Jahren</strong> zur Qualitätssicherung statt.</p>',
-    en:'<p>Follow-ups are usually <strong>day 1 after surgery</strong>, after <strong>1 week</strong>, <strong>3 months</strong> and at <strong>1, 5 and 10 years</strong> for quality assurance.</p>',
-    ar:'<p>المراجعات: <strong>اليوم التالي</strong>، بعد <strong>أسبوع</strong>، <strong>3 أشهر</strong>، وبعد <strong>سنة و5 و10 سنوات</strong>.</p>',
-    tr:'<p>Kontroller: <strong>1. gün</strong>, <strong>1 hafta</strong>, <strong>3 ay</strong>, <strong>1, 5 ve 10 yıl</strong> sonra.</p>'
-  }},
+    "de": "<p>Nach ambulanter Operation ist die erste Kontrolle in der Regel <strong>am ersten oder zweiten Tag</strong> in unserer Praxis; stationär erfolgt sie im Krankenhaus. Weitere Termine zur Qualitätssicherung sind nach <strong>3 Monaten</strong> sowie nach <strong>1, 5 und 10 Jahren</strong> vorgesehen. Zusätzliche Wundkontrollen werden individuell vereinbart.</p>",
+    "en": "<p>After outpatient surgery, the first check is usually on <strong>day 1 or 2</strong> at our practice; inpatients are checked in hospital. Further quality-assurance follow-ups are planned at <strong>3 months</strong> and <strong>1, 5 and 10 years</strong>. Additional wound checks are arranged individually.</p>",
+    "ar": "<p>بعد العملية النهارية، تكون المراجعة الأولى عادةً في <strong>اليوم الأول أو الثاني</strong> في العيادة؛ وللمرضى المقيمين تتم في المستشفى. تُجرى مراجعات ضمان الجودة بعد <strong>٣ أشهر</strong> ثم بعد <strong>سنة و٥ و١٠ سنوات</strong>. تُحدَّد مراجعات الجرح الإضافية حسب الحالة.</p>",
+    "tr": "<p>Ayakta ameliyat sonrası ilk kontrol genellikle muayenehanemizde <strong>1. veya 2. gün</strong> yapılır; yatan hastalar hastanede kontrol edilir. Kalite takibi için <strong>3 ay</strong> ve <strong>1, 5 ve 10 yıl</strong> sonra kontroller planlanır. Ek yara kontrolleri bireysel olarak belirlenir.</p>"
+}},
 
-{ id:'a40', cat:'allgemein',
+{ id:'a40', cat:'nachbehandlung',
   q:{ de:'Wie erkenne ich, ob die Hernie zurückgekehrt ist (Rezidiv)?', en:'How to recognise hernia recurrence?', ar:'كيف أعرف عودة الفتق؟', tr:'Fıtık nüksü nasıl anlaşılır?' },
   a:{
     de:'<p>Neue oder wiederkehrende Vorwölbung an der Operationsstelle – oft zunächst nur beim Husten oder Pressen.</p>',
@@ -377,7 +440,7 @@ const FAQ = [
     tr:'<p>Ameliyat bölgesinde yeni/yinelenen şişlik — genellikle önce sadece öksürme/ıkınmada.</p>'
   }},
 
-{ id:'a41', cat:'allgemein',
+{ id:'a41', cat:'nachbehandlung',
   q:{ de:'Was tun bei einem Rezidiv?', en:'What to do in case of recurrence?', ar:'ماذا أفعل عند الارتجاع؟', tr:'Nüks olursa ne yapılır?' },
   a:{
     de:'<p>Eine erneute Operation ist möglich. Die Methode hängt von einigen Faktoren ab, vor allem der Methode der ersten Bauchwandoperation. Besprechen Sie die beste Methode mit dem Chirurgen.</p>',
@@ -386,7 +449,7 @@ const FAQ = [
     tr:'<p>Yeniden ameliyat mümkündür. Yöntem, ilk onarım tekniğine bağlıdır. Cerrahınızla görüşün.</p>'
   }},
 
-{ id:'a42', cat:'allgemein',
+{ id:'a42', cat:'entscheidung',
   q:{ de:'Kann eine Hernie in der Schwangerschaft auftreten?', en:'Hernia during pregnancy?', ar:'فتق أثناء الحمل؟', tr:'Hamilelikte fıtık?' },
   a:{
     de:'<p>Ja. Durch den erhöhten Bauchdruck in der Schwangerschaft können Nabel- und Leistenhernien entstehen oder sich verschlechtern. Die Operation wird meist <strong>nach der Geburt</strong> durchgeführt.</p>',
@@ -395,7 +458,7 @@ const FAQ = [
     tr:'<p>Evet. Hamilelikte artan basınç göbek/kasık fıtığını oluşturabilir veya kötüleştirebilir. Ameliyat genellikle <strong>doğumdan sonra</strong>.</p>'
   }},
 
-{ id:'a43', cat:'allgemein',
+{ id:'a43', cat:'vorbereitung',
   q:{ de:'Kann eine stillende Mutter operiert werden?', en:'Can a breastfeeding mother be operated?', ar:'هل يمكن إجراء عملية للأم المرضعة؟', tr:'Emziren anne ameliyat olabilir mi?' },
   a:{
     de:'<p>Ja, nach Absprache mit dem Anästhesisten. Manche Narkosemittel gehen in die Muttermilch über. <strong>Kurzes Pausieren des Stillens (12–24 Stunden)</strong> kann empfohlen werden.</p>',
@@ -404,7 +467,7 @@ const FAQ = [
     tr:'<p>Evet, anestezi uzmanıyla görüşülerek. Bazı anestezikler süte geçer. <strong>Kısa ara (12–24 saat)</strong> önerilebilir.</p>'
   }},
 
-{ id:'a44', cat:'allgemein',
+{ id:'a44', cat:'entscheidung',
   q:{ de:'Wie werden Hernien bei älteren Patienten behandelt?', en:'Hernias in elderly patients?', ar:'الفتق عند كبار السن؟', tr:'Yaşlı hastalarda fıtık?' },
   a:{
     de:'<p>Das Alter alleine ist keine Kontraindikation. Bei entsprechend gesunden älteren Patienten ist die Operation sicher. Bei Hochrisikopatienten (Herzinsuffizienz, Nierenversagen) wird das Risiko individuell abgewogen.</p>',
@@ -413,7 +476,7 @@ const FAQ = [
     tr:'<p>Sadece yaş kontrendikasyon değil. Sağlıklı yaşlılarda ameliyat güvenli. Yüksek riskli hastalarda bireysel değerlendirilir.</p>'
   }},
 
-{ id:'a45', cat:'allgemein',
+{ id:'a45', cat:'vorbereitung',
   q:{ de:'Was ist bei Patienten mit Diabetes zu beachten?', en:'What about diabetic patients?', ar:'ماذا عن مرضى السكري؟', tr:'Diyabet hastalarında?' },
   a:{
     de:'<p>Diabetes erhöht das <strong>Infektionsrisiko</strong> und verlangsamt die Wundheilung. Gute Blutzuckereinstellung vor und nach der OP ist entscheidend. Metformin wird vor der OP nach Rücksprache mit dem Narkosearzt pausiert.</p>',
@@ -431,7 +494,7 @@ const FAQ = [
     tr:'<p>Evet! Çocuklarda (özellikle erkeklerde) kanal doğuştan açık kalabilir. Yetişkinlerden farklı — <strong>yama gerekmez</strong>, basit dikiş yeterli.</p>'
   }},
 
-{ id:'a47', cat:'allgemein',
+{ id:'a47', cat:'vorbereitung',
   q:{ de:'Ich habe Angst vor der Narkose – was soll ich tun?', en:'I am afraid of anaesthesia — what to do?', ar:'أخاف من التخدير - ماذا أفعل؟', tr:'Anesteziden korkuyorum — ne yapmalıyım?' },
   a:{
     de:'<p>Sprechen Sie offen mit dem Anästhesisten im Vorgespräch. Moderne Narkosen sind sehr sicher. Bei Bedarf kann ein leichtes Beruhigungsmittel vor der OP gegeben werden.</p>',
@@ -440,7 +503,7 @@ const FAQ = [
     tr:'<p>Anestezi uzmanıyla açık konuşun. Modern anestezi çok güvenli. Gerekirse hafif sakinleştirici verilebilir.</p>'
   }},
 
-{ id:'a48', cat:'allgemein',
+{ id:'a48', cat:'entscheidung',
   q:{ de:'Ich habe Angst vor chronischen Schmerzen nach der OP – ist das begründet?', en:'I worry about chronic pain after surgery — is that justified?', ar:'أخاف من الألم المزمن بعد العملية', tr:'Ameliyat sonrası kronik ağrıdan korkuyorum' },
   a:{
     de:'<p>Chronische Schmerzen nach Hernienoperation (&gt; 3 Monate) kommen bei ca. 5–10 % der Patienten vor. Meist sind sie mild. Schwere chronische Schmerzen sind selten (1–3 %). Erfahrene Chirurgen verringern dieses Risiko durch nervenerhaltende Operationstechnik.</p>',
@@ -449,16 +512,16 @@ const FAQ = [
     tr:'<p>Kronik ağrı (&gt; 3 ay) hastaların %5–10\'unda görülür. Genellikle hafiftir. Şiddetli kronik ağrı nadirdir (%1–3). Deneyimli cerrahlar sinir koruyucu teknikle riski azaltır.</p>'
   }},
 
-{ id:'a49', cat:'allgemein',
+{ id:'a49', cat:'nachbehandlung',
   q:{ de:'Kann ich nach der Hernienoperation wieder vollständig aktiv sein?', en:'Can I be fully active again?', ar:'هل أعود كامل النشاط؟', tr:'Tam aktif olabilir miyim?' },
   a:{
-    de:'<p>Bei den meisten Patienten: Ja! Nach vollständiger Heilung (6 Wochen) können Sie wieder alle Aktivitäten ausführen – Sport, Arbeit, Reisen. Eine Hernienoperation verbessert in der Regel die Lebensqualität erheblich.</p>',
-    en:'<p>Yes for most patients! After full healing (6 weeks) you can resume all activities — sport, work, travel. Hernia surgery generally improves quality of life significantly.</p>',
-    ar:'<p>لمعظم المرضى نعم! بعد الشفاء التام (6 أسابيع) جميع الأنشطة. تحسّن جودة الحياة بشكل كبير.</p>',
-    tr:'<p>Çoğu hasta için evet! Tam iyileşmeden sonra (6 hafta) tüm aktiviteler. Yaşam kalitesini belirgin artırır.</p>'
-  }},
+    "de": "<p>Die meisten Patienten können nach der Heilung wieder vollständig aktiv sein. Die Rückkehr zu Sport und Belastung erfolgt schrittweise nach dem persönlichen Nachbehandlungsplan; es gibt keinen festen Termin, der für alle Operationsarten und Aktivitäten gilt.</p><p>Maßgeblich ist Ihr persönlicher Nachbehandlungsplan. Je nach Bruchgröße, Operationsverfahren und Heilungsverlauf können andere Vorgaben gelten.</p>",
+    "en": "<p>Most patients can return to full activity after healing. Sport and physical activity are resumed gradually according to the individual aftercare plan; no single date applies to every operation and activity.</p><p>Your individual aftercare plan takes priority. Instructions can differ according to hernia size, surgical technique and healing.</p>",
+    "ar": "<p>يمكن لمعظم المرضى العودة إلى كامل النشاط بعد الالتئام. تكون العودة للرياضة والأحمال تدريجية وفق خطة التعافي الفردية؛ لا يوجد موعد ثابت ينطبق على جميع العمليات والأنشطة.</p><p>تُقدَّم تعليمات خطة التعافي الخاصة بك على هذه الإرشادات. قد تختلف التعليمات حسب حجم الفتق وطريقة العملية وسير الالتئام.</p>",
+    "tr": "<p>Çoğu hasta iyileşmenin ardından tam aktiviteye dönebilir. Spor ve fiziksel yüklenmeye kişisel bakım planına göre kademeli dönülür; tüm ameliyatlar ve aktiviteler için geçerli tek bir tarih yoktur.</p><p>Kişisel ameliyat sonrası bakım planınız önceliklidir. Fıtığın büyüklüğü, ameliyat yöntemi ve iyileşme sürecine göre talimatlar değişebilir.</p>"
+}},
 
-{ id:'a50', cat:'allgemein',
+{ id:'a50', cat:'entscheidung',
   q:{ de:'Werden die Kosten von der Krankenkasse übernommen?', en:'Are costs covered by health insurance?', ar:'هل يغطي التأمين التكاليف؟', tr:'Maliyetleri sigorta karşılar mı?' },
   a:{
     de:'<p>Ja. Hernienoperationen sind medizinisch indizierte Eingriffe und werden vollständig von der gesetzlichen und privaten Krankenversicherung übernommen.</p>',
@@ -467,7 +530,7 @@ const FAQ = [
     tr:'<p>Evet. Fıtık ameliyatları tıbbi endikasyonludur, devlet ve özel sigorta tamamen karşılar.</p>'
   }},
 
-{ id:'a51', cat:'allgemein',
+{ id:'a51', cat:'entscheidung',
   q:{ de:'Werden die Kosten einer operativen Behandlung der Rektusdiastase von der Krankenkasse übernommen?', en:'Are diastasis recti surgery costs covered?', ar:'هل يغطي التأمين تباعد المستقيمتين؟', tr:'Rektus diyastazı ameliyatı karşılanır mı?' },
   a:{
     de:'<p>In der Regel werden die Kosten für eine operative Behandlung einer Rektusdiastase <strong>nicht</strong> von den gesetzlichen Krankenkassen übernommen. Die Krankenkassen stufen den Eingriff meist als ästhetische Operation ein, da eine alleinige Rektusdiastase oft keinen eigenständigen Krankheitswert besitzt.</p>',
@@ -476,7 +539,7 @@ const FAQ = [
     tr:'<p>Devlet sigortası genellikle rektus diyastazını <strong>karşılamaz</strong>; estetik olarak sınıflandırılır.</p>'
   }},
 
-{ id:'a52', cat:'allgemein',
+{ id:'a52', cat:'vorbereitung',
   q:{ de:'Brauche ich eine Überweisung zum Chirurgen?', en:'Do I need a referral?', ar:'هل أحتاج إحالة؟', tr:'Sevk gerekir mi?' },
   a:{
     de:'<p>Formal nicht unbedingt, aber sinnvoll. Mit Überweisung durch den Hausarzt sind alle Kosten direkt übernommen.</p>',
@@ -485,7 +548,7 @@ const FAQ = [
     tr:'<p>Resmi olarak şart değil, önerilir. Aile hekimi sevkiyle masraflar doğrudan karşılanır.</p>'
   }},
 
-{ id:'a53', cat:'allgemein',
+{ id:'a53', cat:'entscheidung',
   q:{ de:'Kann ich mir den Chirurgen aussuchen?', en:'Can I choose my surgeon?', ar:'هل أختار الجراح؟', tr:'Cerrahı seçebilir miyim?' },
   a:{
     de:'<p>Ja! Als Kassen- sowie als Privatpatient können Sie eine Klinik und einen Chirurgen Ihrer Wahl aufsuchen.</p>',
@@ -494,7 +557,7 @@ const FAQ = [
     tr:'<p>Evet! Hem devlet hem özel sigortalı her klinik ve cerrahı seçebilir.</p>'
   }},
 
-{ id:'a54', cat:'allgemein',
+{ id:'a54', cat:'entscheidung',
   q:{ de:'Soll ich mich bei einem spezialisierten Hernienzentrum operieren lassen?', en:'Should I go to a specialised hernia centre?', ar:'هل ألجأ لمركز فتق متخصص؟', tr:'Uzman fıtık merkezine gitmeli miyim?' },
   a:{
     de:'<p>Bei komplizierten Hernien (große Narbenhernien, Rezidivhernien) ist ein spezialisiertes Hernienzentrum empfehlenswert. In Deutschland gibt es von der Deutschen Herniengesellschaft (DHG) zertifizierte Zentren.</p>',
@@ -503,7 +566,7 @@ const FAQ = [
     tr:'<p>Karmaşık fıtıklarda uzman merkez önerilir. Almanya\'da DHG sertifikalı merkezler var.</p>'
   }},
 
-{ id:'a55', cat:'allgemein',
+{ id:'a55', cat:'entscheidung',
   q:{ de:'Wo finde ich ein spezialisiertes Hernienzentrum in Deutschland?', en:'Where to find a specialised centre in Germany?', ar:'أين أجد مركز فتق متخصص؟', tr:'Almanya\'da uzman merkez nerede?' },
   a:{
     de:'<p>Die Praxis OC | OrthoChirurgie ist ein zertifiziertes Hernienzentrum. Weitere Zentren in Deutschland finden Sie unter <a href="http://www.herniamed.de/zertifizierte-hernienzentren" target="_blank" rel="noopener">www.herniamed.de/zertifizierte-hernienzentren</a>.</p>',

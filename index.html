@@ -4,8 +4,8 @@
 <template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#1f2c5c"/><text x="100" y="100" font-size="60" text-anchor="middle" dominant-baseline="middle" fill="#fff">OC</text></svg></template>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="OC | OrthoChirurgie – Zertifiziertes Hernienzentrum Ludwigshafen. Ihre Fragen zu Leistenhernie, Nabelhernie und Narbenhernie.">
-  <title>OC | OrthoChirurgie – Hernienzentrum Ludwigshafen</title>
+  <meta name="description" content="Patienteninformationen zur Hernienchirurgie von Dr. med. Tarek Osman. Antworten auf Fragen vor und nach der Operation.">
+  <title>Dr. med. Tarek Osman | Patienteninformationen zur Hernienchirurgie</title>
   <link rel="icon" type="image/png" href="assets/logo.png">
 
   <!-- Fonts -->
@@ -14,8 +14,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..600,0..100&family=Manrope:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/motion.css">
 </head>
 <body>
+<div class="reading-progress" aria-hidden="true"></div>
 
 <!-- ========== HEADER ========== -->
 <header class="site-header">
@@ -42,7 +44,7 @@
         <button data-lang="ar">عربي</button>
         <button data-lang="tr">TR</button>
       </div>
-      <button class="menu-toggle" aria-label="Menü">
+      <button class="menu-toggle" aria-label="Menü" aria-expanded="false" aria-controls="nav-main">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
@@ -58,8 +60,9 @@
       <div class="hero-content">
         <div class="hero-eyebrow">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-          <span data-i18n="hero_eyebrow">Zertifiziertes Hernienzentrum OC | OrthoChirurgie</span>
+          <span data-i18n="hero_eyebrow">Patienteninformationen zur Hernienchirurgie</span>
         </div>
+        <p class="hero-author" data-i18n="patient_author">Dr. med. Tarek Osman</p>
         <h1>
           <span data-i18n="hero_title_a">Ihre Fragen zur</span>
           <em data-i18n="hero_title_b">Hernie</em>
@@ -69,12 +72,12 @@
 
         <div class="searchbox">
           <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-          <input type="text" id="search-input" autocomplete="off" data-i18n-placeholder="search_placeholder" placeholder="z.B. „Wie lange falle ich nach der OP aus?&#34;">
+          <input type="text" id="search-input" data-i18n-aria="search_placeholder" autocomplete="off" data-i18n-placeholder="search_placeholder" placeholder="z.B. „Wie lange falle ich nach der OP aus?&#34;">
           <button id="search-btn">
             <span data-i18n="search_btn">Suchen</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </button>
-          <div class="search-results" id="search-results"></div>
+          <div class="search-results" id="search-results" aria-live="polite"></div>
         </div>
 
         <div class="disclaimer">
@@ -86,12 +89,25 @@
           <a class="hero-cta" href="https://www.doctolib.de/allgemeiner-chirurg/ludwigshafen-am-rhein/tarek-osman" target="_blank" rel="noopener" data-i18n="hero_cta">Termin online buchen bei Doctolib</a>
         </div>
 
+
+      </div>
+
+      <div class="hero-media">
+        <div class="orbital-field" aria-hidden="true"><i></i><i></i><i></i><span></span></div>
+        <div class="hero-media-frame">
+          <img src="./ihr-spezialistenteam-f-r-hernienchirurgi-mtk7rrlv-jfn3.png" alt="Ihr Spezialistenteam für Hernienchirurgie — OC | OrthoChirurgie" width="1080" height="1350" fetchpriority="high">
+        </div>
+
+
+      </div>
+    </div>
+    <div class="container hero-tools">
         <div class="hero-shortcuts">
-          <button class="shortcut" data-page-link data-page="faq" onclick="document.querySelector('[data-cat=\'allgemein\']')?.click();">
+          <button class="shortcut" data-page-link data-page="faq" data-faq-category="vorbereitung">
             <span class="shortcut-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11H5a2 2 0 0 0-2 2v7h18v-7a2 2 0 0 0-2-2h-4M9 11V5a3 3 0 1 1 6 0v6M9 11h6"/></svg></span>
             <span class="shortcut-text" data-i18n="sc_op">Vor der Operation</span>
           </button>
-          <button class="shortcut" data-page-link data-page="faq">
+          <button class="shortcut" data-page-link data-page="faq" data-faq-category="nachbehandlung">
             <span class="shortcut-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></span>
             <span class="shortcut-text" data-i18n="sc_after">Nach der OP</span>
           </button>
@@ -122,15 +138,6 @@
               <p class="rf-cta" data-i18n="rf_cta"><b>→ Suchen Sie in diesem Fall umgehend die nächste Notaufnahme auf.</b></p>
             </div>
           </details>
-      </div>
-
-      <div class="hero-media">
-        <div class="hero-media-frame">
-          <img src="./ihr-spezialistenteam-f-r-hernienchirurgi-mtk7rrlv-jfn3.png" alt="Ihr Spezialistenteam für Hernienchirurgie — OC | OrthoChirurgie" width="1080" height="1350">
-        </div>
-
-
-      </div>
     </div>
   </section>
 
@@ -183,7 +190,8 @@
   <div class="container">
     <div class="about">
       <div class="about-photo">
-        <img src="assets/dr-osman.jpg" alt="Dr. med. Tarek Osman">
+        <div class="orbital-field" aria-hidden="true"><i></i><i></i><i></i><span></span></div>
+        <div class="about-photo-frame"><img src="assets/dr-osman.jpg" alt="Dr. med. Tarek Osman"></div>
       </div>
       <div class="about-content">
         <span class="about-role" data-i18n="about_eyebrow">Ihr Operateur</span>
@@ -202,7 +210,7 @@
           </div>
           <div class="cred">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
-            <span data-i18n="cred_doc">Facharzt für Chirurgie</span>
+            <span data-i18n="cred_doc">Facharzt für Allgemein- und Viszeralchirurgie</span>
           </div>
           <div class="cred">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
@@ -215,6 +223,9 @@
         </div>
 
         <div class="about-links">
+        <a href="https://qrco.de/betOX3" target="_blank" rel="noopener" class="cv-link cv-link-alt review-link">
+          <span aria-hidden="true">★</span><span data-i18n="review_write">Auf Google bewerten</span>
+        </a>
         <a href="#cv" data-page-link data-page="cv" class="cv-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/><line x1="9" y1="11" x2="15" y2="11"/></svg>
           <span data-i18n="cv_link">Vollständigen Lebenslauf ansehen</span>
@@ -266,6 +277,24 @@
         <span data-i18n="faq_title_c">Fragen.</span>
       </h2>
       <p data-i18n="faq_sub">Übersichtlich nach Themen geordnet – auf der Basis aktueller Leitlinien und langjähriger klinischer Erfahrung.</p>
+    </div>
+
+    <div class="faq-search-area">
+      <label class="faq-search-label" for="faq-search-input" data-i18n="faq_search_label">Fragen durchsuchen</label>
+        <div class="searchbox">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" id="faq-search-input" data-i18n-aria="search_placeholder" autocomplete="off" data-i18n-placeholder="search_placeholder" placeholder="z.B. „Wie lange falle ich nach der OP aus?&#34;">
+          <button id="faq-search-btn">
+            <span data-i18n="search_btn">Suchen</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+          <div class="search-results" id="faq-search-results" aria-live="polite"></div>
+        </div>
+      <div class="faq-contact">
+        <p data-i18n="faq_contact_prompt">Ihre Frage ist noch offen? Schreiben Sie uns bei nicht dringlichen Anliegen.</p>
+        <a class="btn btn-ghost" href="mailto:info@oc-orthochirurgie.com">info@oc-orthochirurgie.com</a>
+        <p class="faq-contact-note" data-i18n="faq_email_note">E-Mail ist nicht für akute Beschwerden oder Notfälle geeignet.</p>
+      </div>
     </div>
 
     <div class="faq-categories" id="faq-categories"></div>
@@ -479,14 +508,6 @@
           <p data-i18n="dl_after_sub">Verhalten, Belastung und Wundpflege nach der Operation.</p>
         </div>
         <span class="dl-get"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg><span data-i18n="dl_read">Lesen</span></span></button>
-      <article class="dl-card">
-        <div class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM12 16v.01M12 8a2 2 0 0 1 1 3.7c-.6.4-1 .8-1 1.3"/></svg></div>
-        <div class="dl-body">
-          <h3 data-i18n="dl_what">Was ist ein Leistenbruch</h3>
-          <p data-i18n="dl_what_sub">Verständlich erklärt: Ursachen, Symptome, Behandlung.</p>
-        </div>
-        <span class="dl-pending" data-i18n="dl_pending">Bald verfügbar</span>
-      </article>
     </div>
   </div>
 </section>
@@ -886,7 +907,9 @@
 <script src="js/docs.js"></script>
 <script src="js/social.js"></script>
 <script src="js/i18n.js"></script>
+<script src="js/faq-presentation.js"></script>
 <script src="js/app.js"></script>
 
+<script src="js/motion.js"></script>
 </body>
 </html>
