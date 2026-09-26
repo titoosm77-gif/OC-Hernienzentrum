@@ -141,7 +141,7 @@ h1 em,h2 em {font-weight:500;}
   .hero-content > :nth-child(6) {animation-delay:.34s;}
   .hero-media-frame {animation:media-entry 1.2s var(--ease) both;}
   .orbital-field {animation:orbital-entry 2.4s ease-out both;}
-  .reveal-once {animation:reveal-in .7s var(--ease) both;animation-delay:var(--reveal-delay,0ms);}
+  .reveal-once {animation:reveal-in .45s var(--ease) both;animation-delay:var(--reveal-delay,0ms);}
 }
 html[dir='rtl'] h1,html[dir='rtl'] h2,html[dir='rtl'] h3 {letter-spacing:0;line-height:1.45;}
 html[dir='rtl'] .hero h1 {line-height:1.4;}

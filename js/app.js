@@ -68,15 +68,33 @@
     });
 
     // Re-render content
+    renderAlert();
     renderHerniaTypes();
     renderFaqCategories();
     renderFaq();
   }
 
   // ===== Navigation =====
+  // Welche Seite gehört zur aktuellen Adresse? (#faq für alte Links, sonst Dateiname wie faq.html)
+  function pageFromLocation() {
+    const hash = location.hash.slice(1);
+    if (hash && document.getElementById('page-' + hash)) return hash;
+    const file = decodeURIComponent(location.pathname.split('/').pop() || 'index.html');
+    const pages = window.OC_PAGES || {};
+    return Object.keys(pages).find(id => pages[id].file === file) || 'home';
+  }
+
   function showPage(pageId, updateHistory = true) {
     if (!document.getElementById('page-' + pageId)) pageId = 'home';
-    if (updateHistory && location.hash !== '#' + pageId) history.pushState(null, '', '#' + pageId);
+    const meta = (window.OC_PAGES || {})[pageId];
+    if (updateHistory) {
+      try { history.pushState(null, '', meta ? meta.file : '#' + pageId); }
+      catch { history.pushState(null, '', '#' + pageId); }
+    }
+    if (meta) {
+      document.title = meta.title;
+      document.querySelector('meta[name="description"]')?.setAttribute('content', meta.description);
+    }
     state.page = pageId;
     $$('.page').forEach(p => p.classList.toggle('active', p.id === 'page-' + pageId));
     $$('.nav-main a').forEach(a => a.classList.toggle('active', a.dataset.page === pageId));
@@ -128,6 +146,13 @@
         </article>
       `).join('');
     }
+  }
+
+  // ===== Warnzeichen-Karte (Inhalt aus Frage n15, damit beides immer gleich bleibt) =====
+  function renderAlert() {
+    const wrap = $('#faq-alert-list');
+    const item = state.faq.find(f => f.id === 'n15');
+    if (wrap && item) wrap.innerHTML = item.a[state.lang];
   }
 
   // ===== Render FAQ Categories =====
@@ -295,13 +320,15 @@
     function buildResults(query) {
       const lang = state.lang;
       const matches = searchFaq(query);
+      const mail = '<a href="mailto:info@oc-orthochirurgie.com">info@oc-orthochirurgie.com</a>';
       if (matches.length === 0) {
-        results.innerHTML = `<div class="search-empty">${t('search_no')}</div>`;
+        results.innerHTML = `<div class="search-empty">${t('search_no')}<div class="search-mail">${mail}</div></div>`;
         results.classList.add('show');
         return;
       }
       const cats = window.CATEGORIES;
-      results.innerHTML = matches.map(m => {
+      const count = matches.length === 1 ? t('search_count_one') : t('search_count_many').replace('{n}', matches.length);
+      results.innerHTML = `<div class="search-head"><strong>${t('search_results_title')}</strong><span>${count}</span></div>` + matches.map(m => {
         const cat = cats.find(c => c.id === m.item.cat);
         const snippet = stripHtml(m.item.a[lang]).slice(0, 140);
         return `
@@ -311,7 +338,7 @@
             <div class="res-snippet">${snippet}…</div>
           </button>
         `;
-      }).join('');
+      }).join('') + `<div class="search-foot">${t('search_notfound')} ${mail}</div>`;
       results.classList.add('show');
 
       results.querySelectorAll('.search-result').forEach(r => {
@@ -445,7 +472,7 @@
       const renderFeed = (platform) => {
         const p = window.OC_SOCIAL[platform];
         if (!p.videos.length) {
-          feed.innerHTML = '<div class="social-empty">' + (t('social_empty') || '') + ' <a href="' + p.profile + '" target="_blank" rel="noopener">' + p.handle + '</a></div>';
+          feed.innerHTML = '<div class="social-empty"><p>' + (t('social_empty') || '') + '</p><a class="btn" href="' + p.profile + '" target="_blank" rel="noopener">' + t('social_open') + ' ' + p.handle + '</a></div>';
           return;
         }
         feed.innerHTML = p.videos.map(v =>
@@ -499,6 +526,7 @@
       document.querySelectorAll('.press-card').forEach(card => {
         card.addEventListener('click', () => {
           lbImg.src = card.dataset.press;
+          lbImg.alt = card.dataset.alt || '';
           lb.hidden = false;
           document.body.style.overflow = 'hidden';
         });
@@ -512,8 +540,8 @@
     setupSearch();
     setupSearch('faq-search');
     applyLang();
-    showPage(location.hash.slice(1) || 'home', false);
-    window.addEventListener('popstate', () => showPage(location.hash.slice(1) || 'home', false));
+    showPage(pageFromLocation(), false);
+    window.addEventListener('popstate', () => showPage(pageFromLocation(), false));
   });
 
 })();

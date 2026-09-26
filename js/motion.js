@@ -5,11 +5,14 @@
     const fine = window.matchMedia('(pointer: fine)');
     const header = document.querySelector('.site-header');
     const bar = document.querySelector('.reading-progress');
+    const toTop = document.querySelector('.to-top');
+    toTop?.addEventListener('click', () => window.scrollTo({top:0, behavior: reduced.matches ? 'auto' : 'smooth'}));
     let ticking = false;
     function scrollUI() {
       const total = document.documentElement.scrollHeight - window.innerHeight;
       bar.style.transform = `scaleX(${total > 0 ? Math.min(1, window.scrollY / total) : 0})`;
       header.classList.toggle('scrolled', window.scrollY > 16);
+      toTop?.classList.toggle('show', window.scrollY > 700);
       ticking = false;
     }
     window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(scrollUI); } }, {passive:true});
@@ -70,12 +73,12 @@
         if (!reduced.matches) entry.target.classList.add('reveal-once');
         observer.unobserve(entry.target);
       });
-    }, {threshold:.08}) : null;
+    }, {threshold:0, rootMargin:'0px 0px 80px 0px'}) : null;
     function prepare() {
       document.querySelectorAll(reveal).forEach((el,i) => {
         if (animated.has(el)) return;
         animated.add(el);
-        el.style.setProperty('--reveal-delay', `${(i % 3)*65}ms`);
+        el.style.setProperty('--reveal-delay', `${(i % 3)*40}ms`);
         observer?.observe(el);
       });
       document.querySelectorAll('.hernia-card').forEach(el => {

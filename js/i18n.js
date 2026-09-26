@@ -242,7 +242,7 @@ const I18N = {
     cv_h_awards: 'Auszeichnungen',
     cv_award_1: 'Reisestipendium des Deutschen Pankreasclub 2007, Dresden (22.–24.11.2007)',
     cv_award_2: 'Stipendium, Heidelberger Stiftung Chirurgie (01.10.2007 – 31.03.2008)',
-    cv_award_3: 'Stipendium der Manfred Lautenschlaeger-Stiftung / Heidelberger Stiftung Chirurgie (01.10.2004 – 31.09.2007)',
+    cv_award_3: 'Stipendium der Manfred Lautenschlaeger-Stiftung / Heidelberger Stiftung Chirurgie (01.10.2004 – 30.09.2007)',
 
     // Contact
     addr_apollonia: 'Ambulante Hernienchirurgie',
@@ -486,7 +486,7 @@ const I18N = {
     cv_h_awards: 'Awards',
     cv_award_1: 'Travel grant of the German Pancreas Club 2007, Dresden (22–24 Nov 2007)',
     cv_award_2: 'Scholarship, Heidelberg Foundation Surgery (01.10.2007 – 31.03.2008)',
-    cv_award_3: 'Scholarship of the Manfred Lautenschlaeger Foundation / Heidelberg Foundation Surgery (01.10.2004 – 31.09.2007)',
+    cv_award_3: 'Scholarship of the Manfred Lautenschlaeger Foundation / Heidelberg Foundation Surgery (01.10.2004 – 30.09.2007)',
 
     // Contact
     addr_apollonia: 'Outpatient hernia surgery',
@@ -726,7 +726,7 @@ const I18N = {
     cv_h_awards: 'الجوائز',
     cv_award_1: 'منحة سفر من نادي البنكرياس الألماني 2007، Dresden (22.–24.11.2007)',
     cv_award_2: 'منحة، مؤسسة Heidelberg للجراحة (01.10.2007 – 31.03.2008)',
-    cv_award_3: 'منحة من مؤسسة Manfred Lautenschlaeger / مؤسسة Heidelberg للجراحة (01.10.2004 – 31.09.2007)',
+    cv_award_3: 'منحة من مؤسسة Manfred Lautenschlaeger / مؤسسة Heidelberg للجراحة (01.10.2004 – 30.09.2007)',
 
     addr_apollonia: 'جراحة فتق نهارية',
     addr_grn: 'جراحة فتق نهارية وداخلية',
@@ -965,7 +965,7 @@ const I18N = {
     cv_h_awards: 'Ödüller',
     cv_award_1: 'Alman Pankreas Kulübü\'nün 2007 seyahat bursu, Dresden (22.–24.11.2007)',
     cv_award_2: 'Heidelberg Cerrahi Vakfı bursu (01.10.2007 – 31.03.2008)',
-    cv_award_3: 'Manfred Lautenschlaeger Vakfı / Heidelberg Cerrahi Vakfı bursu (01.10.2004 – 31.09.2007)',
+    cv_award_3: 'Manfred Lautenschlaeger Vakfı / Heidelberg Cerrahi Vakfı bursu (01.10.2004 – 30.09.2007)',
 
     addr_apollonia: 'Ayakta fıtık cerrahisi',
     addr_grn: 'Ayakta ve yatarak fıtık cerrahisi',
@@ -1215,3 +1215,93 @@ const PATIENT_UI = {
   }
 };
 Object.entries(PATIENT_UI).forEach(([lang, labels]) => Object.assign(window.I18N[lang], labels));
+
+// Datenschutz, Notruf-Button und Social-Media-Link.
+const EXTRA_UI = {
+  "de": {
+    "nav_privacy": "Datenschutz",
+    "privacy_lang_note": "Rechtlich maßgeblich ist die deutsche Fassung.",
+    "rf_call": "Notruf 112 anrufen",
+    "social_open": "Profil öffnen"
+  },
+  "en": {
+    "nav_privacy": "Privacy",
+    "privacy_lang_note": "This privacy policy is only available in German. The German version is legally binding.",
+    "rf_call": "Call emergency 112",
+    "social_open": "Open profile"
+  },
+  "ar": {
+    "nav_privacy": "حماية البيانات",
+    "privacy_lang_note": "سياسة الخصوصية متوفرة باللغة الألمانية فقط، والنسخة الألمانية هي الملزمة قانونياً.",
+    "rf_call": "اتصل بالطوارئ 112",
+    "social_open": "افتح الملف الشخصي"
+  },
+  "tr": {
+    "nav_privacy": "Gizlilik",
+    "privacy_lang_note": "Gizlilik politikası yalnızca Almanca olarak mevcuttur. Hukuken bağlayıcı olan Almanca metindir.",
+    "rf_call": "Acil 112'yi arayın",
+    "social_open": "Profili aç"
+  }
+};
+Object.entries(EXTRA_UI).forEach(([lang, labels]) => Object.assign(window.I18N[lang], labels));
+
+// FAQ: Hinweis, Warnzeichen-Karte, Suchergebnisse, „Nach oben“.
+const FAQ_UX = {
+  "de": {
+    "faq_disclaimer": "Die Informationen auf dieser Seite dienen als allgemeine Orientierung und ersetzen nicht die individuelle ärztliche Beratung. <strong>Ihre persönlichen Anweisungen nach der Operation haben immer Vorrang.</strong>",
+    "alert_title": "Wann sollten Sie uns kontaktieren?",
+    "alert_lead": "Melden Sie sich nach der Operation umgehend bei uns, wenn eines dieser Anzeichen auftritt:",
+    "alert_112": "Notruf 112",
+    "alert_112_sub": "Bei lebensbedrohlichen Beschwerden",
+    "alert_116_sub": "Außerhalb der Sprechzeiten: ärztlicher Bereitschaftsdienst",
+    "faq_reviewed": "Medizinisch geprüft von Dr. med. Tarek Osman · Stand: September 2026",
+    "search_results_title": "Ihre Suchergebnisse",
+    "search_count_one": "1 passende Antwort gefunden",
+    "search_count_many": "{n} passende Antworten gefunden",
+    "search_notfound": "Nicht gefunden, was Sie suchen? Schreiben Sie uns:",
+    "to_top": "Nach oben"
+  },
+  "en": {
+    "faq_disclaimer": "The information on this page is intended as general guidance and does not replace individual medical advice. <strong>Your personal instructions after surgery always take priority.</strong>",
+    "alert_title": "When should you contact us?",
+    "alert_lead": "After your operation, contact us immediately if any of these signs occur:",
+    "alert_112": "Emergency 112",
+    "alert_112_sub": "For life-threatening symptoms",
+    "alert_116_sub": "Outside practice hours: on-call medical service",
+    "faq_reviewed": "Medically reviewed by Dr. med. Tarek Osman · Last updated: September 2026",
+    "search_results_title": "Your search results",
+    "search_count_one": "1 matching answer found",
+    "search_count_many": "{n} matching answers found",
+    "search_notfound": "Didn't find what you were looking for? Write to us:",
+    "to_top": "Back to top"
+  },
+  "ar": {
+    "faq_disclaimer": "المعلومات في هذه الصفحة للتوجيه العام فقط ولا تغني عن الاستشارة الطبية الفردية. <strong>تعليماتك الشخصية بعد العملية لها الأولوية دائمًا.</strong>",
+    "alert_title": "متى يجب أن تتواصل معنا؟",
+    "alert_lead": "تواصل معنا فورًا بعد العملية إذا ظهرت إحدى هذه العلامات:",
+    "alert_112": "الطوارئ 112",
+    "alert_112_sub": "في الحالات المهددة للحياة",
+    "alert_116_sub": "خارج أوقات العيادة: خدمة الطبيب المناوب",
+    "faq_reviewed": "مراجعة طبية: د. طارق عثمان · آخر تحديث: سبتمبر 2026",
+    "search_results_title": "نتائج البحث",
+    "search_count_one": "تم العثور على إجابة واحدة مناسبة",
+    "search_count_many": "تم العثور على {n} إجابات مناسبة",
+    "search_notfound": "لم تجد ما تبحث عنه؟ راسلنا:",
+    "to_top": "إلى الأعلى"
+  },
+  "tr": {
+    "faq_disclaimer": "Bu sayfadaki bilgiler genel bir yol gösterici niteliğindedir ve bireysel tıbbi danışmanlığın yerini tutmaz. <strong>Ameliyat sonrası size verilen kişisel talimatlar her zaman önceliklidir.</strong>",
+    "alert_title": "Bize ne zaman başvurmalısınız?",
+    "alert_lead": "Ameliyattan sonra aşağıdaki belirtilerden biri ortaya çıkarsa hemen bizimle iletişime geçin:",
+    "alert_112": "Acil 112",
+    "alert_112_sub": "Hayati tehlike durumunda",
+    "alert_116_sub": "Muayene saatleri dışında: nöbetçi hekim hizmeti",
+    "faq_reviewed": "Tıbbi kontrol: Dr. med. Tarek Osman · Son güncelleme: Eylül 2026",
+    "search_results_title": "Arama sonuçlarınız",
+    "search_count_one": "1 uygun yanıt bulundu",
+    "search_count_many": "{n} uygun yanıt bulundu",
+    "search_notfound": "Aradığınızı bulamadınız mı? Bize yazın:",
+    "to_top": "Yukarı"
+  }
+};
+Object.entries(FAQ_UX).forEach(([lang, labels]) => Object.assign(window.I18N[lang], labels));
